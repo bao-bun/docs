@@ -1,0 +1,39 @@
+---
+title: "Giveaway Claimtime"
+description: "This page explains how the claimtime works and how to configure it."
+---
+
+## Explanation
+
+The giveaway claimtime is a feature that sets a time limit for winners to claim their prizes.
+
+- It's a role-specific setting, meaning different roles can have different claim times.
+- The settings you make are organized into presets.
+ - When starting a giveaway, you can select which preset to use.
+
+## Setting up claimtime
+
+Adding claimtime for a role
+
+<CodeGroup>
+```txt Syntax
+bao claimtime add <role> <claimtime> <entries (default to 1)>
+```
+
+```txt Example
+bao claimtime add @humans 1m
+```
+</CodeGroup>
+
+
+Removing claimtime from a role
+
+<CodeGroup>
+```txt Syntax
+bao claimtime remove
+```
+
+```txt Example
+bao claimtime remove @sigmas
+```
+</CodeGroup>

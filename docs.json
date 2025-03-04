@@ -1,11 +1,11 @@
 {
     "$schema": "https://mintlify.com/docs.json",
     "theme": "mint",
-    "name": "Mint Starter Kit",
+    "name": "bao bun docs",
     "colors": {
-        "primary": "#16A34A",
-        "light": "#07C983",
-        "dark": "#15803D"
+        "primary": "#e57a9e",
+        "light": "#f7c0d0",
+        "dark": "#d44d76"
     },
     "favicon": "/favicon.svg",
     "navigation": {
@@ -13,13 +13,19 @@
             {
                 "group": "Overview",
                 "pages": [
-                    "introduction"
+                    "introduction",
+                    "message_id"
                 ]
             },
             {
                 "group": "Server Configuration",
                 "pages": [
-                    "config/giveaway",
+                    {
+                        "group": "Giveaways",
+                        "icon": "party-horn",
+                        "pages": ["config/giveaway/managment", "config/giveaway/claimtime"]
+                    },
+
                     "config/pingonjoin",
                     "config/dmonjoin"
                 ]
@@ -27,8 +33,8 @@
         ]
     },
     "logo": {
-        "light": "/logo/light.svg",
-        "dark": "/logo/dark.svg"
+        "light": "/images/logo.png",
+        "dark": "/images/logo.png"
     },
     "navbar": {
         "links": [

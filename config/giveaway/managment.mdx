@@ -1,0 +1,40 @@
+---
+title: "Managing Giveaways"
+description: "This page shows you how to manage giveaways on your server."
+---
+
+### Starting a giveaway
+If no channel is provided, it will default to the current one.
+
+<CodeGroup>
+```txt Syntax
+bao gstart <duration> <winners> <preset> [channel] <prize>
+```
+
+```txt Example 1
+bao gstart 12h 1w #giveaways Year of Nitro Basic
+```
+
+
+```txt Example 2
+bao gstart 7d 10w preset-3 Month of Nitro
+```
+</CodeGroup>
+
+
+### Ending or rerolling giveaways 
+You can end a giveaway early or reroll the winners of a giveaway that has ended.
+
+If you need help with getting the Message ID, visit [this page](/help/message_id).
+
+<CodeGroup>
+```txt Syntax
+bao gend <message_id>
+bao greroll <message_id>
+```
+
+```txt Example
+bao gend 1346616792751149077
+bao greroll 1567991258432115349
+```
+</CodeGroup>
