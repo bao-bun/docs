@@ -1,7 +1,7 @@
 ---
 title: "Ping on Join"
 icon: "at"
-description: "This page shows you how to set-up Ping on Join."
+description: "Ping on Join sends a message in a channel when a new member joins."
 ---
 
 ### Setting it up
@@ -16,7 +16,30 @@ bao poj
 <img src="/images/poj.png"/>
 
 You can use the dropdown menu to select which setting you want to edit.
-You can either enable/disable Ping on Join, edit the message and edit the delete after time.
+The delete after time determines when the message is removed. Setting it to 0 disables deletion.
 
-The delete after time just means after how long the message should get deleted.
-Leaving this at 0 seconds will never delete the message.
+### Adding/Removing channels
+
+To add a channel, you can use the following command:
+
+<CodeGroup>
+```javascript Syntax
+bao poj add <channel>
+```
+
+```javascript Example
+bao poj add #giveaways
+```
+</CodeGroup>
+
+To remove a channel, you can use the following command:
+
+<CodeGroup>
+```javascript Syntax
+bao poj remove <channel>
+```
+
+```javascript Example
+bao poj remove #updates
+```
+</CodeGroup>

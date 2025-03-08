@@ -8,16 +8,16 @@ description: "This page shows you how to manage giveaways on your server."
 If no channel is provided, it will default to the current one.
 
 <CodeGroup>
-```txt Syntax
+```javascript Syntax
 bao gstart <duration> <winners> <preset> [channel] <prize>
 ```
 
-```txt Example 1
+```javascript Example 1
 bao gstart 12h 1w #giveaways Year of Nitro Basic
 ```
 
 
-```txt Example 2
+```javascript Example 2
 bao gstart 7d 10w preset-3 Month of Nitro
 ```
 </CodeGroup>
@@ -29,12 +29,12 @@ You can end a giveaway early or reroll the winners of a giveaway that has ended.
 If you need help with getting the Message ID, visit [this page](/resources/message_id).
 
 <CodeGroup>
-```txt Syntax
+```javascript Syntax
 bao gend <message_id>
 bao greroll <message_id>
 ```
 
-```txt Example
+```javascript Example
 bao gend 1346616792751149077
 bao greroll 1567991258432115349
 ```
