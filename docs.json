@@ -7,14 +7,13 @@
         "light": "#f7c0d0",
         "dark": "#d44d76"
     },
-    "favicon": "/favicon.svg",
+    "favicon": "/images/logo.png",
     "navigation": {
         "groups": [
             {
                 "group": "Overview",
                 "pages": [
-                    "introduction",
-                    "message_id"
+                    "introduction"
                 ]
             },
             {
@@ -28,6 +27,13 @@
 
                     "config/pingonjoin",
                     "config/dmonjoin"
+                ]
+            },
+            {
+                "group": "Resources",
+                "pages": [
+                    "resources/message_id",
+                    "resources/syntax"
                 ]
             }
         ]
