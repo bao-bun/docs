@@ -52,8 +52,8 @@
     },
     "footer": {
         "socials": {
-            "github": "https://github.com/bao-bot",
-            "discord": "https://discord.gg/AXRShswtZ4"
+            "discord": "https://discord.gg/AXRShswtZ4",
+            "github": "https://github.com/bao-bot"
         }
     }
 }
