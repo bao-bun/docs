@@ -22,7 +22,7 @@
                     {
                         "group": "Giveaways",
                         "icon": "party-horn",
-                        "pages": ["config/giveaway/managment", "config/giveaway/claimtime"]
+                        "pages": ["config/giveaway/managment", "config/giveaway/claimtime", "config/giveaway/configuration"]
                     },
 
                     "config/pingonjoin",
@@ -33,7 +33,9 @@
                 "group": "Resources",
                 "pages": [
                     "resources/message_id",
-                    "resources/syntax"
+                    "resources/syntax",
+                    "resources/markdown",
+                    "resources/embed_layout"
                 ]
             }
         ]
