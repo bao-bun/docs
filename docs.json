@@ -26,7 +26,8 @@
                     },
 
                     "config/pingonjoin",
-                    "config/dmonjoin"
+                    "config/dmonjoin",
+                    "config/timediff"
                 ]
             },
             {
