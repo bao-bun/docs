@@ -2,10 +2,16 @@
     "$schema": "https://mintlify.com/docs.json",
     "theme": "mint",
     "name": "bao bun docs",
+    "description": "documentation for the bao bun Discord bot",
     "colors": {
         "primary": "#e57a9e",
         "light": "#f7c0d0",
         "dark": "#d44d76"
+    },
+    "seo": {
+        "metatags": {
+            "theme-color": "#e3c2cd"
+        }
     },
     "favicon": "/images/logo.png",
     "navigation": {
