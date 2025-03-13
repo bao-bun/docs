@@ -13,7 +13,6 @@
             "theme-color": "#e3c2cd"
         }
     },
-    "favicon": "/images/logo.png",
     "navigation": {
         "groups": [
             {
@@ -31,9 +30,11 @@
                         "pages": ["config/giveaway/managment", "config/giveaway/claimtime", "config/giveaway/configuration"]
                     },
 
-                    "config/pingonjoin",
-                    "config/dmonjoin",
-                    "config/timediff"
+                    {
+                        "group": "Guild",
+                        "icon": "house",
+                        "pages": ["config/guild/pingonjoin", "config/guild/dmonjoin", "config/guild/timediff", "config/guild/channels"]
+                    }
                 ]
             },
             {
@@ -48,6 +49,10 @@
         ]
     },
     "logo": {
+        "light": "/images/logo.png",
+        "dark": "/images/logo.png"
+    },
+    "favicon": {
         "light": "/images/logo.png",
         "dark": "/images/logo.png"
     },

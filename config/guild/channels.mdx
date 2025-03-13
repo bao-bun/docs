@@ -1,0 +1,71 @@
+---
+title: "Channel Commands"
+icon: "hashtag"
+description: "List of commands that have to do with channels"
+---
+
+## Summary
+1. bao clone [channel] - clone a channel
+2. bao movech \<category\> [channel] - move a channel to another category
+3. bao nuke [channel] - nuke the channel (creates new one and deletes old)
+4. bao rename [channel] \<category\> - rename name of channel
+
+<Info>If you don't provide a channel, it will default to the current channel.</Info>
+
+<CodeGroup>
+```javascript Syntax
+bao clone [channel]
+```
+
+```javascript Example
+bao clone #chat
+```
+
+```javascript Example 2
+bao clone
+```
+</CodeGroup>
+
+<CodeGroup>
+```javascript Syntax
+bao movech <category> [channel]
+```
+
+```javascript Example
+bao movech support #tickets
+```
+
+```javascript Example 2
+bao movech support #tickets
+```
+</CodeGroup>
+
+
+<CodeGroup>
+```javascript Syntax
+bao nuke [channel]
+```
+
+```javascript Example
+bao nuke #spam
+```
+
+```javascript Example 2
+bao nuke
+```
+</CodeGroup>
+
+
+<CodeGroup>
+```javascript Syntax
+bao rename [channel] <name>
+```
+
+```javascript Example
+bao rename #palyground playground
+```
+
+```javascript Example 2
+bao rename updates
+```
+</CodeGroup>
