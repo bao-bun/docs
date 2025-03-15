@@ -38,6 +38,12 @@
                 ]
             },
             {
+                "group": "Other Features",
+                "pages": [
+                    "features/afk"
+                ]
+            },
+            {
                 "group": "Resources",
                 "pages": [
                     "resources/message_id",
