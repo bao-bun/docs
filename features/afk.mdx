@@ -1,10 +1,11 @@
 ---
-title: "AFK"
+title: "AFK & Auto-AFK"
 icon: "snooze"
-description: "This page shows you how to use the AFK and auto-afk command"
+description: "This page shows you how to use the AFK and auto-afk commands"
 ---
 
 ## AFK command
+
 <CodeGroup>
 ```javascript Syntax
 bao afk [reason]
@@ -22,6 +23,7 @@ bao afk I am sleeping 😴
 If someone mentions you, they will see how long you've been AFK for, and for what reason.
 <img src="/images/afk_ping.png"/>
 
+## Auto-AFK command
 
 Now by default, if you send a message in any channel, the bot will remove your AFK status.
 If you want to disable this behaviour, you can use the auto-afk command.
@@ -32,6 +34,5 @@ bao autoafk
 ```
 </CodeGroup>
 
-Then to remove your AFK status if you disable auto-afk, you can use the `bao afk` command again.
-
+If you disable auto-afk, you can remove your AFK status using the `bao afk` command.
 <img src="/images/auto_afk.png"/>

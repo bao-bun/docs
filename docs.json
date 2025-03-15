@@ -33,14 +33,16 @@
                     {
                         "group": "Guild",
                         "icon": "house",
-                        "pages": ["config/guild/pingonjoin", "config/guild/dmonjoin", "config/guild/timediff", "config/guild/channels"]
+                        "pages": ["config/guild/pingonjoin", "config/guild/dmonjoin"]
                     }
                 ]
             },
             {
-                "group": "Other Features",
+                "group": "Features",
                 "pages": [
-                    "features/afk"
+                    "features/afk",
+                    "features/timediff",
+                    "features/channels"
                 ]
             },
             {
