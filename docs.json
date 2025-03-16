@@ -40,6 +40,11 @@
             {
                 "group": "Features",
                 "pages": [
+                    {
+                        "group": "Moderation",
+                        "icon": "lock",
+                        "pages": ["features/moderation/purge", "features/moderation/massban"]
+                    },
                     "features/afk",
                     "features/timediff",
                     "features/channels"
