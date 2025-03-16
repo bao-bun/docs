@@ -50,7 +50,7 @@
                 "pages": [
                     "resources/message_id",
                     "resources/syntax",
-                    "resources/markdown",
+                    "resources/variables",
                     "resources/embed_layout"
                 ]
             }
