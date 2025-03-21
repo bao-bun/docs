@@ -1,0 +1,46 @@
+---
+title: "Auto Responders"
+icon: "reply"
+description: "Auto Responders respond to any message with a specific trigger phrase."
+---
+
+Use `bao responder list` to view your current auto-responders.
+
+### Adding Auto-Responders
+To add an auto-responder, you can use the following command:
+
+<CodeGroup>
+```javascript Syntax
+bao responder add <trigger> <response>
+```
+
+```javascript Example 1
+bao responder add "i love bao bun" me too!!!
+```
+
+```javascript Example 2
+/responder add i love bao bun me too bestie
+```
+</CodeGroup>
+
+<Note>If your trigger is more than 1 word, and you are not using slash commands, you need to put it inside of quotation marks.</Note>
+
+
+### Removing Auto-Responders
+To remove an auto-responders, you can use the following command:
+
+<CodeGroup>
+```javascript Syntax
+bao responder remove <trigger>
+```
+
+```javascript Example 1
+bao responder remove i love bao bun
+```
+
+```javascript Example 2
+/responder remove i love bao bun
+```
+</CodeGroup>
+
+Here you don't have to use quotation marks at all, even if your trigger is more than 1 word.

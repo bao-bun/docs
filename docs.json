@@ -24,6 +24,7 @@
             {
                 "group": "Server Configuration",
                 "pages": [
+                    "config/responders",
                     {
                         "group": "Giveaways",
                         "icon": "party-horn",
