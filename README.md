@@ -1,5 +1,5 @@
-# bao bun documentation
-welcome to the repository of the bao bun documentation.
+# baobun documentation
+welcome to the repository of the baobun documentation.
 
 ### Development
 install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command

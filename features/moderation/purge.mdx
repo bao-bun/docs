@@ -9,11 +9,11 @@ The purge command can be used to delete many messages at once.
 
 <CodeGroup>
 ```javascript Syntax
-bao purge <amount>
+/purge <amount>
 ```
 
 ```javascript Example
-bao purge 15
+/purge 15
 // This will delete exactly 15 messages including your own.
 ```
 </CodeGroup>
@@ -27,16 +27,16 @@ So for example, you can do:
 
 <CodeGroup>
 ```javascript Syntax
-bao purge <amount> --flag=<message_id>
+/purge <amount> --flag=<message_id>
 ```
 
 ```javascript Example 1
-bao purge 15 --before=1350856648046153807
+/purge 15 --before=1350856648046153807
 // This would delete 15 messages that were sent before the given ID.
 ```
 
 ```javascript Example 2
-bao purge 25 --after=1350856648046153807
+/purge 25 --after=1350856648046153807
 // This would delete 25 messages that were sent after the given ID.
 ```
 </CodeGroup>

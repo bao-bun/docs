@@ -5,67 +5,67 @@ description: "List of commands that have to do with channels"
 ---
 
 ## Summary
-1. bao clone [channel] - clone a channel
-2. bao movech \<category\> [channel] - move a channel to another category
-3. bao nuke [channel] - nuke the channel (creates new one and deletes old)
-4. bao rename [channel] \<category\> - rename name of channel
+1. /clone [channel] - clone a channel
+2. /movech \<category\> [channel] - move a channel to another category
+3. /nuke [channel] - nuke the channel (creates new one and deletes old)
+4. /rename [channel] \<category\> - rename name of channel
 
 <Info>If you don't provide a channel, it will default to the current channel.</Info>
 
 <CodeGroup>
 ```javascript Syntax
-bao clone [channel]
+/clone [channel]
 ```
 
 ```javascript Example
-bao clone #chat
+/clone #chat
 ```
 
 ```javascript Example 2
-bao clone
+/clone
 ```
 </CodeGroup>
 
 <CodeGroup>
 ```javascript Syntax
-bao movech <category> [channel]
+/movech <category> [channel]
 ```
 
 ```javascript Example
-bao movech support #tickets
+/movech support #tickets
 ```
 
 ```javascript Example 2
-bao movech support #tickets
-```
-</CodeGroup>
-
-
-<CodeGroup>
-```javascript Syntax
-bao nuke [channel]
-```
-
-```javascript Example
-bao nuke #spam
-```
-
-```javascript Example 2
-bao nuke
+/movech support #tickets
 ```
 </CodeGroup>
 
 
 <CodeGroup>
 ```javascript Syntax
-bao rename [channel] <name>
+/nuke [channel]
 ```
 
 ```javascript Example
-bao rename #palyground playground
+/nuke #spam
 ```
 
 ```javascript Example 2
-bao rename updates
+/nuke
+```
+</CodeGroup>
+
+
+<CodeGroup>
+```javascript Syntax
+/rename [channel] <name>
+```
+
+```javascript Example
+/rename #palyground playground
+```
+
+```javascript Example 2
+/rename updates
 ```
 </CodeGroup>

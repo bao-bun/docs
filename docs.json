@@ -1,8 +1,8 @@
 {
     "$schema": "https://mintlify.com/docs.json",
     "theme": "mint",
-    "name": "bao bun docs",
-    "description": "documentation for the bao bun Discord bot",
+    "name": "baobun docs",
+    "description": "documentation for baobun",
     "colors": {
         "primary": "#e57a9e",
         "light": "#f7c0d0",
@@ -10,7 +10,8 @@
     },
     "seo": {
         "metatags": {
-            "theme-color": "#e3c2cd"
+            "theme-color": "#e3c2cd",
+            "og:site_name": "baobun.dev"
         }
     },
     "navigation": {
@@ -28,7 +29,7 @@
                     {
                         "group": "Giveaways",
                         "icon": "party-horn",
-                        "pages": ["config/giveaway/managment", "config/giveaway/claimtime", "config/giveaway/configuration"]
+                        "pages": ["config/giveaway/managment", "config/giveaway/configuration", "config/giveaway/presets"]
                     },
 
                     {
@@ -62,14 +63,7 @@
             }
         ]
     },
-    "logo": {
-        "light": "/images/logo.png",
-        "dark": "/images/logo.png"
-    },
-    "favicon": {
-        "light": "/images/logo.png",
-        "dark": "/images/logo.png"
-    },
+    "favicon": "favicon.png",
     "navbar": {
         "links": [
             {
