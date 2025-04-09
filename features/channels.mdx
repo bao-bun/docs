@@ -7,10 +7,10 @@ description: "List of commands that have to do with channels"
 ## Summary
 1. /clone [channel] - clone a channel
 2. /movech \<category\> [channel] - move a channel to another category
-3. /nuke [channel] - nuke the channel (creates new one and deletes old)
+3. /nuke [channel] - nuke the channel
 4. /rename [channel] \<category\> - rename name of channel
-5. /lock [channel] - locks a channel (read only)
-6. /unlock [channel] - unlocks a channel (read and write)
+5. /lock [channel] - locks a channel
+6. /hide [channel] - hides a channel
 
 <Info>If you don't provide a channel, it will default to the current channel.</Info>
 
@@ -51,10 +51,6 @@ description: "List of commands that have to do with channels"
 ```javascript Example
 /nuke #spam
 ```
-
-```javascript Example 2
-/nuke
-```
 </CodeGroup>
 
 
@@ -64,7 +60,7 @@ description: "List of commands that have to do with channels"
 ```
 
 ```javascript Example
-/rename #palyground playground
+/rename #playground playground
 ```
 
 ```javascript Example 2
@@ -85,19 +81,35 @@ description: "List of commands that have to do with channels"
 ```javascript Example 2
 /lock #chat
 ```
+
+```javascript Undo Example
+/unlock
+```
+
+```javascript Undo Example 2
+/unlock #chat
+```
 </CodeGroup>
 
 
 <CodeGroup>
 ```javascript Syntax
-/unlock [channel]
+/hide [channel]
 ```
 
 ```javascript Example
-/unlock
+/hide
 ```
 
 ```javascript Example 2
-/unlock #chat
+/hide #chat
+```
+
+```javascript Undo Example
+/unhide
+```
+
+```javascript Undo Example 2
+/unhide #chat
 ```
 </CodeGroup>
