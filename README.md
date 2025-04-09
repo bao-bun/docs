@@ -7,5 +7,7 @@ If you wish to report an issue (something incorrect/missing), please message @to
 
 ## links
 [baobun website](https://baobun.dev)
+
 [baobun documentation](https://docs.baobun.dev)
+
 [baobun support server](https://support.baobun.dev)
