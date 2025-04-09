@@ -9,6 +9,8 @@ description: "List of commands that have to do with channels"
 2. /movech \<category\> [channel] - move a channel to another category
 3. /nuke [channel] - nuke the channel (creates new one and deletes old)
 4. /rename [channel] \<category\> - rename name of channel
+5. /lock [channel] - locks a channel (read only)
+6. /unlock [channel] - unlocks a channel (read and write)
 
 <Info>If you don't provide a channel, it will default to the current channel.</Info>
 
@@ -67,5 +69,35 @@ description: "List of commands that have to do with channels"
 
 ```javascript Example 2
 /rename updates
+```
+</CodeGroup>
+
+
+<CodeGroup>
+```javascript Syntax
+/lock [channel]
+```
+
+```javascript Example
+/lock
+```
+
+```javascript Example 2
+/lock #chat
+```
+</CodeGroup>
+
+
+<CodeGroup>
+```javascript Syntax
+/unlock [channel]
+```
+
+```javascript Example
+/unlock
+```
+
+```javascript Example 2
+/unlock #chat
 ```
 </CodeGroup>
