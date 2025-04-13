@@ -40,7 +40,7 @@
                 ]
             },
             {
-                "group": "Features",
+                "group": "Server Commands",
                 "pages": [
                     {
                         "group": "Moderation",
