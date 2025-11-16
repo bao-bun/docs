@@ -6,3 +6,7 @@ img.w-auto.h-7.relative.object-contain {
   border-radius: 100%;
   height: 2.5rem;
 }
+
+button, a {
+  cursor: pointer;
+}

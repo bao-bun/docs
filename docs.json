@@ -26,7 +26,6 @@
             {
                 "group": "Server Configuration",
                 "pages": [
-                    "config/responders",
                     {
                         "group": "Giveaways",
                         "icon": "party-horn",
@@ -46,12 +45,10 @@
                     {
                         "group": "Moderation",
                         "icon": "lock",
-                        "pages": ["features/moderation/purge", "features/moderation/massban"]
+                        "pages": ["features/moderation/purge"]
                     },
-                    "features/afk",
                     "features/timediff",
-                    "features/channels",
-                    "features/downloader"
+                    "features/channels"
                 ]
             },
             {
