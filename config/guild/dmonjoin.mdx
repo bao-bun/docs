@@ -4,5 +4,59 @@ icon: "message"
 description: "DM on Join privately messages all new members into the server."
 ---
 
-### Notice
-DM on join has not yet been implemented, in the meanwhile you can use [Ping on Join](/config/pingonjoin)
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Jump to a command
+- [Enable](#dm-enable)
+- [Set](#dm-set)
+- [Test](#dm-test)
+
+<Steps>
+  <Step title="enable">
+    <span id="dm-enable"></span>
+
+    **Description**  
+    Enable or disable DM on Join.
+
+    **Usage**
+    ```text
+    /dm toggle
+    ```
+
+    **Parameters**  
+    _No parameters_
+  </Step>
+
+  <Step title="Set">
+    <span id="dm-set"></span>
+
+    **Description**  
+    Set the content used for DM on Join.
+
+    **Usage**
+    ```text
+    /dm set <content_name>
+    ```
+
+    **Parameters**
+    - `content_name` (str) — required  
+      The content name you want to use for DM on Join messages.
+  </Step>
+
+  <Step title="Test">
+    <span id="dm-test"></span>
+
+    **Description**  
+    Run a test DM for DM on Join.
+
+    **Usage**
+    ```text
+    /dm test
+    ```
+
+    **Parameters**  
+    _No parameters_
+  </Step>
+</Steps>

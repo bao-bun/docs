@@ -1,0 +1,126 @@
+---
+title: "Welcomer"
+icon: "at"
+description: "Welcomer sends a message in a channel when a new member joins."
+---
+
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Jump to a command
+- [Add](#welc-add)
+- [Remove](#welc-remove)
+- [Delay](#welc-delay)
+- [Enable](#welc-enable)
+- [Set](#welc-set)
+- [Test](#welc-test)
+
+<Steps>
+  <Step title="Add">
+    <span id="welc-add"></span>
+
+    **Description**  
+    Add a channel to receive welcome messages.
+
+    **Usage**
+    ```text
+    /welcomer add [channel] [content_name] [delay] [enable] [webhook_name]
+    ```
+
+    **Parameters**
+    - `channel` (discord.TextChannel) — optional  
+      The channel that will receive welcome messages.
+    - `content_name` (str) — optional  
+      The custom content to use for this welcome message.
+    - `delay` (TimeConverter) — optional  
+      Delay before sending the welcome message.
+    - `enable` (bool) — default: `true`  
+      Whether the welcomer is enabled for this channel.
+    - `webhook_name` (str) — default: `"baobun | welcomer"`  
+      Name of the webhook created for the welcomer.
+  </Step>
+
+  <Step title="Remove">
+    <span id="welc-remove"></span>
+
+    **Description**  
+    Remove a channel from receiving welcome messages.
+
+    **Usage**
+    ```text
+    /welcomer remove [channel]
+    ```
+
+    **Parameters**
+    - `channel` (discord.TextChannel) — optional  
+      The channel to remove from the welcomer.
+  </Step>
+
+  <Step title="Delay">
+    <span id="welc-delay"></span>
+
+    **Description**  
+    Change the delay for the welcomer.
+
+    **Usage**
+    ```text
+    /welcomer delay <delay> [channel]
+    ```
+
+    **Parameters**
+    - `delay` (TimeConverter) — required  
+      The delay duration before the welcome message is sent.
+    - `channel` (discord.TextChannel) — optional  
+      The channel to apply the delay to.
+  </Step>
+
+  <Step title="Enable">
+    <span id="welc-enable"></span>
+
+    **Description**  
+    Enable or disable the welcomer for a channel.
+
+    **Usage**
+    ```text
+    /welcomer enable [channel]
+    ```
+
+    **Parameters**
+    - `channel` (discord.TextChannel) — optional  
+      The channel to enable or disable welcomer for.
+  </Step>
+
+  <Step title="Set">
+    <span id="welc-set"></span>
+
+    **Description**  
+    Set the welcome content for a channel.
+
+    **Usage**
+    ```text
+    /welcomer set <content_name> [channel]
+    ```
+
+    **Parameters**
+    - `content_name` (str) — required  
+      The name of the content to assign.
+    - `channel` (discord.TextChannel) — optional  
+      The channel to apply the content to.
+  </Step>
+
+  <Step title="Test">
+    <span id="welc-test"></span>
+
+    **Description**  
+    Run a test welcome message.
+
+    **Usage**
+    ```text
+    /welcomer test
+    ```
+
+    **Parameters**  
+    _No parameters_
+  </Step>
+</Steps>

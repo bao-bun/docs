@@ -35,7 +35,7 @@
                     {
                         "group": "Guild",
                         "icon": "house",
-                        "pages": ["config/guild/pingonjoin", "config/guild/dmonjoin"]
+                        "pages": ["config/guild/welcomer", "config/guild/dmonjoin"]
                     }
                 ]
             },
