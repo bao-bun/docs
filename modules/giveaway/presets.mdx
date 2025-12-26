@@ -1,28 +1,83 @@
 ---
 title: "Presets"
 icon: "clock"
-description: "This page explains what presets are and how to use them."
+description: "Create and manage presets for roles, claim times, and entries."
 ---
 
-## Explanation
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
 
-Presets are a way of storing extra claimtime and entries for specific roles.
+### Viewing presets
+View an existing preset.
 
-For example, you can create a preset with that allows a role to have more claimtime or more entries than usual.
+<CodeGroup>
+```javascript syntax
+/preset view-preset <preset_name>
+````
 
-<img src="/images/presets_example.png"/>
+</CodeGroup>
 
-### Managing Presets
+- `preset_name` (text) — required
+  The name of the preset you want to view.
 
-To manage your presets, you can use the following command:
-```javascript
-/preset config
+### Creating a preset
+Create a new preset.
+
+<CodeGroup>
+```javascript syntax
+/preset create-preset <preset_name>
 ```
-This will open a menu where you can view, create and delete presets.
+</CodeGroup>
 
-You can use this command, to add a new role to a preset:
-```javascript
-/preset add <role> <claimtime> [entries]
+- `preset_name` (text) — required
+  The name you want to give the new preset.
+
+### Removing a preset
+Remove an existing preset.
+
+<CodeGroup>
+```javascript syntax
+/preset remove-preset <preset_name>
 ```
-This will also open a menu where you can select the preset you want to add the role to.
+</CodeGroup>
+
+- `preset_name` (text) — required
+  The name of the preset you want to delete.
+
+### Adding a role to a preset
+Add a role configuration to an existing preset.
+
+<CodeGroup>
+```javascript syntax
+/preset add-role <preset_name> <role> <claim_time> [entries] [claim_time_stack] [entries_stack]
+```
+</CodeGroup>
+
+- `preset_name` (text) — required
+  The name of the preset you want to modify.
+- `role` (role) — required
+  The role you want to add to the preset.
+- `claim_time` (time) — required
+  The claim time assigned to this role.
+- `entries` (number) — default: `0`
+  The number of extra entries this role grants.
+- `claim_time_stack` (bool) — default: `false`
+  Whether claim time stacks with other roles.
+- `entries_stack` (bool) — default: `false`
+  Whether entries stack with other roles.
+
+### Removing a role from a preset
+Remove a role from an existing preset.
+
+<CodeGroup>
+```javascript syntax
+/preset remove-role <preset_name> <role>
+```
+</CodeGroup>
+
+- `preset_name` (text) — required
+  The name of the preset you want to modify.
+- `role` (role) — required
+  The role you want to remove from the preset.
 

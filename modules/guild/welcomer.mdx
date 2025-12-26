@@ -19,13 +19,13 @@ Add a channel to receive welcome messages.
 
 - `channel` (channel) — optional
   The channel that will receive welcome messages.
-- `content_name` (str) — optional
+- `content_name` (text) — optional
   The custom content to use for this welcome message.
 - `delay` (time) — optional
   Delay before sending the welcome message.
 - `enable` (bool) — default: `true`
   Whether the welcomer is enabled for this channel.
-- `webhook_name` (str) — default: `"baobun | welcomer"`
+- `webhook_name` (text) — default: `"baobun | welcomer"`
   Name of the webhook created for the welcomer.
 
 
@@ -80,7 +80,7 @@ Set the welcome content for a channel.
 ```
 </CodeGroup>
 
-- `content_name` (str) — required
+- `content_name` (text) — required
   The name of the content to assign.
 - `channel` (channel) — optional
   The channel to apply the content to.

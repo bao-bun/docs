@@ -4,29 +4,102 @@ icon: "gear"
 description: "This page shows you how to configure your giveaways."
 ---
 
-### Editor
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
 
-To use the configuration editor, use the following command:
+### Set giveaway embed
+Set the embed content used for giveaways.
+
 <CodeGroup>
-```javascript Command
-/giveaway
+```javascript syntax
+/gw set-gw-embed <content_name>
 ```
 </CodeGroup>
 
-You can change every single thing about your giveaways using this command.
+- `content_name` (text) — required
+  The custom content name to use as the giveaway embed.
 
-<img src="/images/gw_config.png"/>
+### Set reaction
+Set the reaction emoji used for giveaways.
 
-For more custom variables ([user_mention], [claimtime], etc.) visit [this resource](/resources/variables).
+<CodeGroup>
+```javascript syntax
+/gw set-reaction <reaction>
+```
+</CodeGroup>
 
-### Custom Embed Editor
+- `reaction` (text) — required
+  The emoji used for giveaway reactions.
 
-Here is how the custom embed editor looks like:
+### Set winner message
+Set the message sent when winners are chosen.
 
-<img src="/images/gw_embed_editor.png"/>    
+<CodeGroup>
+```javascript syntax
+/gw set-winner-message <content_name>
+```
+</CodeGroup>
 
-You can use the dropdown to change the author, thumbnail, title, description, image, footer and color of the embed.
+- `content_name` (text) — required
+  The custom content name to use for the winner message.
 
-You can refer to [this graphic](/resources/embed_layout) if you are unsure which embed setting does what.
+### Set deny message
+Set the deny message for button-mode giveaways.
 
-You can also refer to [this resource](/resources/variables) to see what variables you can use in the embed editor.
+<CodeGroup>
+```javascript syntax
+/gw set-deny-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the deny message.
+
+### Set claim-time message
+Set the claim-time reminder message for giveaways.
+
+<CodeGroup>
+```javascript syntax
+/gw set-claim-time-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the claim-time message.
+
+### Set claim-time-over message
+Set the message sent when claim time expires.
+
+<CodeGroup>
+```javascript syntax
+/gw set-claim-time-over-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the claim-time-over message.
+
+### Set accept message
+Set the accept message for button-mode giveaways.
+
+<CodeGroup>
+```javascript syntax
+/gw set-accept-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the accept message.
+
+### Set void message
+Set the message sent when there are no valid entries.
+
+<CodeGroup>
+```javascript syntax
+/gw set-void-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the no-entry message.

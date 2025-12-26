@@ -1,41 +1,84 @@
 ---
-title: "Managment"
-icon: "hammer"
-description: "This page shows you how to manage giveaways on your server."
+title: "Management"
+icon: "gift"
+description: "Create, manage, and customize giveaways."
 ---
 
-### Starting a giveaway
-If no channel is provided, it will default to the current one.
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Quick giveaway
+Create a quick and classic giveaway with minimal setup.
 
 <CodeGroup>
-```javascript Syntax
+```javascript syntax
+/gw quick <duration> <winners> [channel] <prize>
+````
+
+</CodeGroup>
+
+- `duration` (time) — required
+  The duration of the giveaway.
+- `winners` (number) — required
+  The number of winners for the giveaway.
+- `channel` (channel) — optional
+  The channel where the giveaway will be created.
+- `prize` (text) — required
+  The prize for the giveaway.
+
+### Start giveaway
+Create a fully customizable giveaway.
+
+<CodeGroup>
+```javascript syntax
 /gw start <duration> <winners> [channel] <prize>
 ```
-
-```javascript Example 1
-/gw start 12h 1w #giveaways Year of Nitro Basic
-```
-
-
-```javascript Example 2
-/gw start 7d 10w Month of Nitro
-```
 </CodeGroup>
 
+- `duration` (time) — required
+  The duration of the giveaway.
+- `winners` (number) — required
+  The number of winners for the giveaway.
+- `channel` (channel) — optional
+  The channel where the giveaway will be created.
+- `prize` (text) — required
+  The prize for the giveaway.
 
-### Ending or rerolling giveaways 
-You can end a giveaway early or reroll the winners of a giveaway that has ended.
-
-If you need help with getting the Message ID, visit [this page](/resources/message_id).
+### Reroll giveaway
+Reroll winners for an ended giveaway using its message ID.
 
 <CodeGroup>
-```javascript Syntax
-/gw end <message_id>
-/gw reroll <message_id>
-```
-
-```javascript Example
-/gw end 1346616792751149077
-/gw reroll 1567991258432115349
+```javascript syntax
+/gw reroll <message_id> [winners]
 ```
 </CodeGroup>
+
+- `message_id` (text) — required
+  The message ID of the giveaway embed.
+- `winners` (number) — optional
+  The number of winners to reroll.
+
+### End giveaway
+End an ongoing giveaway early.
+
+<CodeGroup>
+```javascript syntax
+/gw end <message_id>
+```
+</CodeGroup>
+
+- `message_id` (text) — required
+  The message ID of the giveaway embed.
+
+### Edit giveaway
+Edit an ongoing giveaway using its message ID.
+
+<CodeGroup>
+```javascript syntax
+/gw edit <message_id>
+```
+</CodeGroup>
+
+- `message_id` (text) — required
+  The message ID of the giveaway embed.
