@@ -5,7 +5,7 @@ description: "This resource explains the syntax of commands."
 ---
 
 ### Syntax for durations
-Sometimes a command requires a `duration`, for example the command for starting giveaways.
+Sometimes a command requires a `time`, for example the command for starting giveaways.
 The following units can be used for a duration:
 - `s` seconds
 - `m` minutes
@@ -15,13 +15,13 @@ The following units can be used for a duration:
 Not only that, you can also combine the units, for example `7d12h` would equal a duration of 7 days and 12 hours.
 
 <CodeGroup>
-```javascript Correct Syntax
-bao gstart 7d 1w Month of Nitro
-bao gstart 12h5m 1w Month of Nitro
+```javascript valid syntax
+7d
+12h5m
 ```
 
-```javascript Incorrect Syntax
-bao gstart 7 days 1w Month of Nitro
-bao gstart 12hours 5 minutes 1w Month of Nitro
+```javascript invalid syntax
+7 days 1w
+12hours 5 minutes
 ```
 </CodeGroup>

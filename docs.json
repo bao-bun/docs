@@ -19,37 +19,29 @@
             {
                 "group": "Overview",
                 "pages": [
-                    "introduction"
+                    "overview/introduction",
+                    "overview/support"
                 ]
             },
             {
-                "group": "Server Configuration",
+                "group": "Modules",
                 "pages": [
-                    "config/responders",
                     {
                         "group": "Giveaways",
                         "icon": "party-horn",
-                        "pages": ["config/giveaway/managment", "config/giveaway/configuration", "config/giveaway/presets"]
+                        "pages": ["modules/giveaway/managment", "modules/giveaway/configuration", "modules/giveaway/presets"]
                     },
 
                     {
                         "group": "Guild",
                         "icon": "house",
-                        "pages": ["config/guild/welcomer", "config/guild/dmonjoin"]
-                    }
-                ]
-            },
-            {
-                "group": "Server Commands",
-                "pages": [
-                    {
-                        "group": "Moderation",
-                        "icon": "lock",
-                        "pages": ["features/moderation/purge", "features/moderation/massban"]
+                        "pages": ["modules/guild/welcomer", "modules/guild/dmonjoin", "modules/guild/customcontents", "modules/guild/customization"]
                     },
-                    "features/afk",
-                    "features/timediff",
-                    "features/channels"
+                    {
+                        "group": "Utility",
+                        "icon": "screwdriver",
+                        "pages": ["modules/utility/misc"]
+                    }
                 ]
             },
             {

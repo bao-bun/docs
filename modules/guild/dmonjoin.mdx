@@ -1,0 +1,43 @@
+---
+title: "DM on Join"
+icon: "message"
+description: "DM on Join privately messages new members who just joined the server."
+---
+
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Enabling DM on Join
+Enable or disable DM on Join.
+
+<CodeGroup>
+```javascript syntax
+/dm enable
+````
+</CodeGroup>
+
+*No parameters*
+
+### Setting DM content
+Set the content used for DM on Join messages.
+
+<CodeGroup>
+```javascript syntax
+/dm set-content <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The content name you want to use for DM on Join messages.
+
+### Test sending
+Run a test DM for DM on Join.
+
+<CodeGroup>
+```javascript syntax
+/dm test-send
+```
+</CodeGroup>
+
+*No parameters*

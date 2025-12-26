@@ -1,0 +1,147 @@
+---
+title: "Channel Utilities"
+icon: "lock"
+description: "Utilities for managing and moderating channels and threads."
+---
+
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Message time difference
+Get the time difference between two messages.
+
+<CodeGroup>
+```javascript syntax
+/timediff [message1_id] [message2_id]
+````
+
+</CodeGroup>
+
+- `message1_id` (text) — optional
+  The ID of the first message.
+- `message2_id` (text) — optional
+  The ID of the second message.
+
+### Purge messages
+Delete multiple messages from a channel.
+
+<CodeGroup>
+```javascript syntax
+/purge <amount> [flags]
+```
+</CodeGroup>
+
+- `amount` (number) — required
+  The number of messages to delete (1–2000).
+- `flags` (text) — optional
+  Optional filters for purging messages.
+  Supported flags:
+
+  - `before=message_id`
+  - `after=message_id`
+
+### Lock a channel or thread
+Lock a channel or thread to prevent interaction.
+
+<CodeGroup>
+```javascript syntax
+/lock [channel]
+```
+</CodeGroup>
+
+- `channel` (channel | thread) — optional
+  The channel or thread to lock.
+  If not provided, the current channel or thread is used.
+
+### Hide a channel or thread
+Hide or archive a channel or thread.
+
+<CodeGroup>
+```javascript syntax
+/hide [channel]
+```
+</CodeGroup>
+
+- `channel` (channel | thread) — optional
+  The channel or thread to hide or archive.
+  If not provided, the current channel or thread is used.
+
+
+
+### Rename a channel
+Rename a channel.
+
+<Note>
+This command is rate-limited per channel.
+</Note>
+
+<CodeGroup>
+```javascript syntax
+/rename [channel] <name>
+```
+</CodeGroup>
+
+- `channel` (channel) — optional
+  The channel you want to rename.
+  If not provided, the current channel is used.
+- `name` (text) — required
+  The new name for the channel.
+
+### Delete a channel
+Delete a channel with confirmation.
+
+<CodeGroup>
+```javascript syntax
+/delete [channel]
+```
+</CodeGroup>
+
+- `channel` (channel) — optional
+  The channel you want to delete.
+  If not provided, the current channel is used.
+
+### Nuke a channel
+Delete and recreate a channel with confirmation.
+
+<CodeGroup>
+```javascript syntax
+/nuke [channel] [delete_after]
+```
+</CodeGroup>
+
+- `channel` (channel) — optional
+  The channel you want to nuke.
+  If not provided, the current channel is used.
+- `delete_after` (time) — optional
+  Time in seconds before deleting the channel.
+
+### Clone a channel
+Create a copy of a channel.
+
+<CodeGroup>
+```javascript syntax
+/clone [channel]
+```
+</CodeGroup>
+
+- `channel` (channel) — optional
+  The channel you want to clone.
+  If not provided, the current channel is used.
+
+### Move a channel
+Move a channel to a different category.
+
+<CodeGroup>
+```javascript syntax
+/movech [category] [channel]
+```
+</CodeGroup>
+
+- `category` (category) — optional
+  The category to move the channel to.
+- `channel` (channel) — optional
+  The channel you want to move.
+  If not provided, the current channel is used.
+
+
