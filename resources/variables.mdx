@@ -1,26 +1,53 @@
 ---
 title: "Variables"
-icon: "pen"
-description: "This resource shows you the available variables for all features."
+icon: "code-bracket"
+description: "All available variables that can be used in custom content."
 ---
 
-### Giveaway Variables
-Here are the variables you can use for the a custom giveaway embed:
-- `[host]` giveaway hoster
-- `[winner_count]` amount of winners
-- `[timestamp]` timestamp of when the giveaway ends
-- `[prize]` giveaway prize
+<Tabs>
+  <Tab title="Guild">
+    | Variable | Output |
+    |---------|--------|
+    | `[server.name]` | The server’s name |
+    | `[server.id]` | The server’s ID |
+    | `[server.owner]` | The server owner’s username |
+    | `[server.owner_mention]` | Mentions the server owner |
+    | `[server.member_count]` | Total number of members |
+    | `[server.boost_count]` | Number of server boosts |
+  </Tab>
 
-<Tip>You can also use `[claimtime]` in your claimtime messages to display the time to claim the giveaway reward. </Tip>
+  <Tab title="User">
+    | Variable | Output |
+    |---------|--------|
+    | `[user.name]` | The user’s username |
+    | `[user.display_name]` | The user’s display name |
+    | `[user.id]` | The user’s ID |
+    | `[user.mention]` | Mentions the user |
+    | `[user.avatar]` | The user’s avatar URL |
+    | `[user.joined_at]` | When the user joined |
+    | `[user.join_position]` | The user’s join position |
+    | `[user.boosting]` | Whether the user is boosting |
+  </Tab>
 
-### Ping on Join & DM on Join Variables
-Here are the variables you can use for the ping on join and the DM on join:
-- `[user_name]` username of the user
-- `[user_display_name]` display name of the user
-- `[user_mention]` mentions the user
-- `[server_name]` name of the server
-- `[server_owner]` owner of the server
-- `[server_owner_mention]` mentions the server owner
-- `[server_member_count]` member count of the server
+  <Tab title="Channel">
+    | Variable | Output |
+    |---------|--------|
+    | `[channel.name]` | The channel’s name |
+    | `[channel.id]` | The channel’s ID |
+    | `[channel.mention]` | Mentions the channel |
+    | `[channel.topic]` | The channel’s topic |
+  </Tab>
 
-<Note>You can find all this information by using the `bao variables` command.</Note>
+  <Tab title="Giveaway">
+    | Variable | Output |
+    |---------|--------|
+    | `[gw.prize]` | Giveaway prize |
+    | `[gw.reaction]` | Giveaway reaction | 
+    | `[gw.winners]` | Number of winners |
+    | `[gw.host]` | Giveaway host |
+    | `[gw.timestamp]` | Giveaway end timestamp |
+    | `[gw.entry_mode]` | Entry method |
+    | `[gw.host]` | Host's mention |
+    | `[gw.claim_time]` | Winner's claim time
+  </Tab>
+</Tabs>
