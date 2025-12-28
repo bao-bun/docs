@@ -5,49 +5,69 @@ description: "All available variables that can be used in custom content."
 ---
 
 <Tabs>
-  <Tab title="Guild">
-    | Variable | Output |
-    |---------|--------|
-    | `[server.name]` | The server’s name |
-    | `[server.id]` | The server’s ID |
-    | `[server.owner]` | The server owner’s username |
-    | `[server.owner_mention]` | Mentions the server owner |
-    | `[server.member_count]` | Total number of members |
-    | `[server.boost_count]` | Number of server boosts |
-  </Tab>
-
   <Tab title="User">
     | Variable | Output |
     |---------|--------|
-    | `[user.name]` | The user’s username |
-    | `[user.display_name]` | The user’s display name |
-    | `[user.id]` | The user’s ID |
-    | `[user.mention]` | Mentions the user |
-    | `[user.avatar]` | The user’s avatar URL |
-    | `[user.joined_at]` | When the user joined |
-    | `[user.join_position]` | The user’s join position |
-    | `[user.boosting]` | Whether the user is boosting |
+    | `[user.mentions]` | Comma separated mentions of all members |
+    | `[user.display_names]` | Comma separated display names of all members |
+    | `[user.names]` | Comma separated usernames of all members |
+    | `[user.join_position]` | Join position of the member in the server |
+    | `[user.id]` | User ID |
+    | `[user.name]` | Username without discriminator |
+    | `[user.display_name]` | Server-specific nickname or username |
+    | `[user.mention]` | User mention string |
+    | `[user.avatar]` | User's global avatar URL |
+    | `[user.server_avatar]` | User's server-specific avatar URL |
+    | `[user.display_avatar]` | The avatar displayed (server or global) |
+    | `[user.created_at]` | Account creation timestamp |
+    | `[user.joined_at]` | Join date of the user in the server |
+    | `[user.boosting]` | Whether the user is boosting the server |
+    | `[user.boost_since]` | Time when user started boosting |
+    | `[user.bot]` | Whether the user is a bot |
+  </Tab>
+
+  <Tab title="Guild">
+    | Variable | Output |
+    |---------|--------|
+    | `[server.id]` | Server (guild) ID |
+    | `[server.name]` | Server name |
+    | `[server.description]` | Server description |
+    | `[server.owner]` | Server owner's username |
+    | `[server.owner_id]` | Server owner's user ID |
+    | `[server.owner_mention]` | Mention of the server owner |
+    | `[server.icon_url]` | Server icon URL |
+    | `[server.banner_url]` | Server banner URL |
+    | `[server.member_count]` | Number of members in the server |
+    | `[server.channel_count]` | Total number of channels |
+    | `[server.text_channel_count]` | Number of text channels |
+    | `[server.voice_channel_count]` | Number of voice channels |
+    | `[server.category_count]` | Number of channel categories |
+    | `[server.role_count]` | Number of roles |
+    | `[server.emoji_count]` | Number of custom emojis |
+    | `[server.sticker_count]` | Number of stickers |
+    | `[server.boost_count]` | Number of server boosts |
   </Tab>
 
   <Tab title="Channel">
     | Variable | Output |
     |---------|--------|
-    | `[channel.name]` | The channel’s name |
-    | `[channel.id]` | The channel’s ID |
-    | `[channel.mention]` | Mentions the channel |
-    | `[channel.topic]` | The channel’s topic |
+    | `[channel.id]` | Channel ID |
+    | `[channel.name]` | Channel name |
+    | `[channel.mention]` | Channel mention |
+    | `[channel.type]` | Channel type (text, voice, thread, etc.) |
+    | `[channel.category]` | Channel category name |
   </Tab>
 
   <Tab title="Giveaway">
     | Variable | Output |
     |---------|--------|
     | `[gw.prize]` | Giveaway prize |
-    | `[gw.reaction]` | Giveaway reaction | 
     | `[gw.winners]` | Number of winners |
-    | `[gw.host]` | Giveaway host |
-    | `[gw.timestamp]` | Giveaway end timestamp |
-    | `[gw.entry_mode]` | Entry method |
-    | `[gw.host]` | Host's mention |
-    | `[gw.claim_time]` | Winner's claim time
+    | `[gw.host]` | Giveaway host mention |
+    | `[gw.duration]` | Giveaway end time |
+    | `[gw.timestamp]` | Relative Discord timestamp |
+    | `[gw.claim_time]` | Winner claim time |
+    | `[gw.reaction]` | Giveaway reaction emoji |
+    | `[gw.entry_mode]` | Entry method (`click on` / `react with`) |
   </Tab>
 </Tabs>
