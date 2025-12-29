@@ -28,18 +28,16 @@ Delete multiple messages from a channel.
 
 <CodeGroup>
 ```javascript syntax
-/purge <amount> [flags]
+/purge [amount] [before] [after]
 ```
 </CodeGroup>
 
-- `amount` (number) — required
+- `amount` (number) — optional
   The number of messages to delete (1–2000).
-- `flags` (text) — optional
-  Optional filters for purging messages.
-  Supported flags:
-
-  - `before=message_id`
-  - `after=message_id`
+- `before` (text) — optional
+  The message ID to purge up to
+- `after` (text) — optional
+  The message ID to purge after to
 
 ### Lock a channel or thread
 Lock a channel or thread to prevent interaction.

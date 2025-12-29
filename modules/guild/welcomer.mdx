@@ -13,7 +13,7 @@ Add a channel to receive welcome messages.
 
 <CodeGroup>
 ```javascript syntax
-/welcomer add-channel [channel] [content_name] [delay] [enable] [webhook_name]
+/welcomer add [channel] [content_name] [delay] [enable] [webhook_name]
 ```
 </CodeGroup>
 
@@ -34,7 +34,7 @@ Remove a channel from receiving welcome messages.
 
 <CodeGroup>
 ```javascript syntax
-/welcomer remove-channel [channel]
+/welcomer remove [channel]
 ```
 </CodeGroup>
 
@@ -48,7 +48,7 @@ Change the delay for the welcomer.
 
 <CodeGroup>
 ```javascript syntax
-/welcomer set-delay <delay> [channel]
+/welcomer delete-after <delay> [channel]
 ```
 </CodeGroup>
 
@@ -76,7 +76,7 @@ Set the welcome content for a channel.
 
 <CodeGroup>
 ```javascript syntax
-/welcomer set-content <content_name> [channel]
+/welcomer content <content_name> [channel]
 ```
 </CodeGroup>
 
@@ -91,7 +91,7 @@ Run a test welcome message.
 
 <CodeGroup>
 ```javascript syntax
-/welcomer test-send
+/welcomer test
 ```
 </CodeGroup>
 
