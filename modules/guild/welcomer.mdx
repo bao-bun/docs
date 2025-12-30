@@ -13,7 +13,7 @@ Add a channel to receive welcome messages.
 
 <CodeGroup>
 ```javascript syntax
-/welcomer add [channel] [content_name] [delay] [enable] [webhook_name]
+/welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
 ```
 </CodeGroup>
 
@@ -23,6 +23,8 @@ Add a channel to receive welcome messages.
   The custom content to use for this welcome message.
 - `delay` (time) — optional
   Delay before sending the welcome message.
+- `delete_after` (time) — optional
+  Delete after sending the welcome message.
 - `enable` (bool) — default: `true`
   Whether the welcomer is enabled for this channel.
 - `webhook_name` (text) — default: `"baobun | welcomer"`
@@ -44,19 +46,34 @@ Remove a channel from receiving welcome messages.
 ### Delaying a channel
 Change the delay for the welcomer.
 
-<Note>Setting 0s of delay keeps the welcomer message</Note>
+<Note>Setting 0s of delay sets no delay for the welcomer message</Note>
 
 <CodeGroup>
 ```javascript syntax
-/welcomer delete-after <delay> [channel]
+/welcomer delay <delay> [channel]
 ```
 </CodeGroup>
 
 - `delay` (time) — required
-  The delay duration before the welcome message is sent.
+  The delay duration you want to delay the welcomer messages.
 - `channel` (channel) — optional
   The channel to apply the delay to.
 
+### Deleting after a channel
+Change the delete after for the welcomer.
+
+<Note>Setting 0s of delete after keeps the welcomer message</Note>
+
+<CodeGroup>
+```javascript syntax
+/welcomer delete-after <delete_after> [channel]
+```
+</CodeGroup>
+
+- `delete_after` (time) — required
+  The delete after duration after the welcome message is sent.
+- `channel` (channel) — optional
+  The channel to apply the delay to.
 
 ### Enable a channel
 Enable or disable the welcomer for a channel.
