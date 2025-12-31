@@ -1,0 +1,100 @@
+---
+title: "Information"
+icon: "info"
+description: "View detailed information about servers, users, roles, invites, and the bot."
+---
+
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Server information
+Display detailed information about the current server.
+
+<CodeGroup>
+```javascript syntax
+/serverinfo
+````
+
+</CodeGroup>
+
+*No parameters*
+
+### Invite information
+Get information about a Discord invite link or code.
+
+<CodeGroup>
+```javascript syntax
+/inviteinfo [invite]
+```
+</CodeGroup>
+
+- `invite` (invite) — optional
+  The invite link or code you want to check.
+  If not provided, the current server invite is used when possible.
+
+### User information
+Display information about a user or server member.
+
+<CodeGroup>
+```javascript syntax
+/userinfo [user]
+```
+</CodeGroup>
+
+- `user` (user | member) — optional
+  The user or member you want to view information for.
+  If not provided, your own user information is shown.
+
+### Role information
+Display information about a server role.
+
+<CodeGroup>
+```javascript syntax
+/roleinfo <role>
+```
+</CodeGroup>
+
+- `role` (role) — required
+  The role you want to view information for.
+
+### Bot information
+Display information about the bot, including statistics and useful links.
+
+<CodeGroup>
+```javascript syntax
+/botinfo
+```
+</CodeGroup>
+
+*No parameters*
+
+
+### Server avatar
+Display a member’s server-specific avatar.
+
+<CodeGroup>
+```javascript syntax
+/serveravatar [member]
+```
+</CodeGroup>
+
+- `member` (member) — optional
+  The member whose server avatar you want to display.
+  If not provided, your own server avatar is shown.
+
+
+### Show Discord ID
+Get the Discord ID of almost any entity.
+
+<CodeGroup>
+```javascript syntax
+/show-id [source]
+```
+</CodeGroup>
+
+- `source` (channel | user | role | emoji | thread) — optional
+  The entity you want to get the ID for.
+  Supported types include channels, users, roles, threads, and emojis.
+
+
