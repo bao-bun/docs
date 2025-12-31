@@ -45,6 +45,14 @@
                 ]
             },
             {
+                "group": "Tutorials",
+                "pages": [
+                    "tutorials/welcomer",
+                    "tutorials/dm",
+                    "tutorials/customcontent"
+                ]
+            },
+            {
                 "group": "Resources",
                 "pages": [
                     "resources/message_id",

@@ -1,0 +1,143 @@
+---
+title: "Welcomer tutorial"
+icon: "hashtag"
+description: "This guide walks you through setting up **Welcomer** from start to finish. By the end, your server will automatically send a welcome message when new members join."
+---
+
+### What Welcomer does
+Welcomer sends a message in a channel when a new member joins your server.  
+You can control:
+- Which channel receives the message
+- What content is sent
+- When the message is sent
+- How long the message stays before being deleted
+- Whether the welcomer is enabled
+- What webhook name is used
+
+## Step 1: Add a welcome channel
+
+The main setup command is `/welcomer add`.  
+This command supports **multiple parameters**, allowing you to configure everything at once.
+
+<CodeGroup>
+```javascript syntax
+/welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
+````
+
+</CodeGroup>
+
+### Parameters explained
+
+- `channel` — optional
+  The channel that will receive welcome messages
+  If omitted, the current channel is used
+
+- `content_name` — optional
+  The custom content used for the welcome message
+  You can change this later using `/welcomer set`
+
+- `delay` — optional
+  How long to wait before sending the welcome message
+  Examples: `5s`, `30s`, `1m`
+
+- `delete_after` — optional
+  How long before the welcome message is automatically deleted
+  Examples: `30s`, `5m`, `1h`
+  Set to `0s` to disable auto-deletion
+
+- `enable` — optional (default: true)
+  Whether the welcomer should be enabled immediately
+
+- `webhook_name` — optional
+  The name of the webhook used to send welcome messages
+  Defaults to `baobun | welcomer`
+
+## Step 2: Update content (optional)
+If you didn’t assign content during setup, or want to change it later:
+
+<CodeGroup>
+```javascript syntax
+/welcomer set <content_name> [channel]
+```
+</CodeGroup>
+
+- This updates the content without re-adding the channel
+
+## Step 3: Adjust timing (optional)
+You can change the delay at any time.
+
+<CodeGroup>
+```javascript syntax
+/welcomer delay <delay> [channel]
+```
+</CodeGroup>
+
+- Useful if you want to fine-tune when the message appears
+
+## Step 4: Control message deletion (optional)
+Change or disable auto-deletion for welcome messages.
+
+<CodeGroup>
+```javascript syntax
+/welcomer delete-after <time> [channel]
+```
+</CodeGroup>
+
+- Keeps welcome channels clean
+- Set to `0s` to keep messages permanently
+
+## Step 5: Enable or disable Welcomer
+Toggle the welcomer on or off for a channel.
+
+<CodeGroup>
+```javascript syntax
+/welcomer enable [channel]
+```
+</CodeGroup>
+
+- Useful for temporarily disabling welcomes without removing configuration
+
+## Step 6: Test your setup
+Always test before going live.
+
+<CodeGroup>
+```javascript syntax
+/welcomer test
+```
+</CodeGroup>
+
+- Sends a test welcome message using the current configuration
+
+## Example full setup (one command)
+Here’s an example of configuring everything at once:
+
+<CodeGroup>
+```javascript syntax
+/welcomer add #welcome default-welcome 5s 1m true "Welcome Bot"
+```
+</CodeGroup>
+
+This setup:
+
+- Sends messages in `#welcome`
+- Uses `default-welcome` content
+- Delays messages by 5 seconds
+- Enables Welcomer immediately
+- Uses a custom webhook name
+- Deletes messages after 1 minute
+
+## Tips and best practices
+- Use variables like `[user.mentions]` and `[server.name]` in your content
+- Set `delete_after` for busy servers
+- Use webhooks to make messages look cleaner
+- Test after every change
+
+## Troubleshooting
+If welcome messages are not sending:
+
+- Make sure the bot has permission to manage webhooks
+- Confirm the channel is enabled
+- Verify content exists
+- Check delay and delete timers
+- Run `/welcomer test`
+
