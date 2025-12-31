@@ -1,0 +1,48 @@
+---
+title: "Reminders"
+icon: "bell"
+description: "Set, view, and manage personal reminders."
+---
+
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Set a reminder
+Create a reminder for yourself that will notify you after a specified duration.
+
+<CodeGroup>
+```javascript syntax
+/remind <duration> [message]
+````
+
+</CodeGroup>
+
+- `duration` (time) — required
+  When to remind you (for example: `10m`, `1h`, `1d`, `1w`)
+- `message` (str) — optional
+  What you want to be reminded about
+
+### View reminders
+View all of your active reminders.
+
+<CodeGroup>
+```javascript syntax
+/remind list
+```
+</CodeGroup>
+
+*No parameters*
+
+### Delete a reminder
+Delete one of your active reminders.
+
+<CodeGroup>
+```javascript syntax
+/remind delete <reminder_id>
+```
+</CodeGroup>
+
+- `reminder_id` (number) — required
+  The ID of the reminder you want to delete
+

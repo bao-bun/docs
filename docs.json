@@ -40,7 +40,7 @@
                     {
                         "group": "Utility",
                         "icon": "screwdriver",
-                        "pages": ["modules/utility/misc", "modules/utility/info"]
+                        "pages": ["modules/utility/misc", "modules/utility/info", "modules/utility/reminder"]
                     }
                 ]
             },
