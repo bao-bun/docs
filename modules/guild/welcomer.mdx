@@ -1,0 +1,116 @@
+---
+title: "Welcomer"
+icon: "at"
+description: "Welcomer sends messages to channels when a new member joins."
+---
+
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Adding a channel
+Add a channel to receive welcome messages.
+
+<CodeGroup>
+```javascript syntax
+/welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
+```
+</CodeGroup>
+
+- `channel` (channel) — optional
+  The channel that will receive welcome messages.
+- `content_name` (text) — optional
+  The custom content to use for this welcome message.
+- `delay` (time) — optional
+  Delay before sending the welcome message.
+- `delete_after` (time) — optional
+  Delete after sending the welcome message.
+- `enable` (bool) — default: `true`
+  Whether the welcomer is enabled for this channel.
+- `webhook_name` (text) — default: `"baobun | welcomer"`
+  Name of the webhook created for the welcomer.
+
+
+### Removing a channel
+Remove a channel from receiving welcome messages.
+
+<CodeGroup>
+```javascript syntax
+/welcomer remove [channel]
+```
+</CodeGroup>
+
+- `channel` (channel) — optional
+  The channel to remove from the welcomer.
+
+### Delaying a channel
+Change the delay for the welcomer.
+
+<Note>Setting 0s of delay sets no delay for the welcomer message</Note>
+
+<CodeGroup>
+```javascript syntax
+/welcomer delay <delay> [channel]
+```
+</CodeGroup>
+
+- `delay` (time) — required
+  The delay duration you want to delay the welcomer messages.
+- `channel` (channel) — optional
+  The channel to apply the delay to.
+
+### Deleting after a channel
+Change the delete after for the welcomer.
+
+<Note>Setting 0s of delete after keeps the welcomer message</Note>
+
+<CodeGroup>
+```javascript syntax
+/welcomer delete-after <delete_after> [channel]
+```
+</CodeGroup>
+
+- `delete_after` (time) — required
+  The delete after duration after the welcome message is sent.
+- `channel` (channel) — optional
+  The channel to apply the delay to.
+
+### Enable a channel
+Enable or disable the welcomer for a channel.
+
+<CodeGroup>
+```javascript syntax
+/welcomer enable [channel]
+```
+</CodeGroup>
+
+- `channel` (channel) — optional
+  The channel to enable or disable welcomer for.
+
+
+### Setting content for a channel
+Set the welcome content for a channel.
+
+<CodeGroup>
+```javascript syntax
+/welcomer content <content_name> [channel]
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The name of the content to assign.
+- `channel` (channel) — optional
+  The channel to apply the content to.
+
+
+### Test sending
+Run a test welcome message.
+
+<CodeGroup>
+```javascript syntax
+/welcomer test
+```
+</CodeGroup>
+
+*No parameters*
+

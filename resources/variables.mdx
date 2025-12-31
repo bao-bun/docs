@@ -1,26 +1,73 @@
 ---
 title: "Variables"
-icon: "pen"
-description: "This resource shows you the available variables for all features."
+icon: "square-root-variable"
+description: "All available variables that can be used in custom content."
 ---
 
-### Giveaway Variables
-Here are the variables you can use for the a custom giveaway embed:
-- `[host]` giveaway hoster
-- `[winner_count]` amount of winners
-- `[timestamp]` timestamp of when the giveaway ends
-- `[prize]` giveaway prize
+<Tabs>
+  <Tab title="User">
+    | Variable | Output |
+    |---------|--------|
+    | `[user.mentions]` | Comma separated mentions of all members |
+    | `[user.display_names]` | Comma separated display names of all members |
+    | `[user.names]` | Comma separated usernames of all members |
+    | `[user.join_position]` | Join position of the member in the server |
+    | `[user.id]` | User ID |
+    | `[user.name]` | Username without discriminator |
+    | `[user.display_name]` | Server-specific nickname or username |
+    | `[user.mention]` | User mention string |
+    | `[user.avatar]` | User's global avatar URL |
+    | `[user.server_avatar]` | User's server-specific avatar URL |
+    | `[user.display_avatar]` | The avatar displayed (server or global) |
+    | `[user.created_at]` | Account creation timestamp |
+    | `[user.joined_at]` | Join date of the user in the server |
+    | `[user.boosting]` | Whether the user is boosting the server |
+    | `[user.boost_since]` | Time when user started boosting |
+    | `[user.bot]` | Whether the user is a bot |
+  </Tab>
 
-<Tip>You can also use `[claimtime]` in your claimtime messages to display the time to claim the giveaway reward. </Tip>
+  <Tab title="Guild">
+    | Variable | Output |
+    |---------|--------|
+    | `[server.id]` | Server (guild) ID |
+    | `[server.name]` | Server name |
+    | `[server.description]` | Server description |
+    | `[server.owner]` | Server owner's username |
+    | `[server.owner_id]` | Server owner's user ID |
+    | `[server.owner_mention]` | Mention of the server owner |
+    | `[server.icon_url]` | Server icon URL |
+    | `[server.banner_url]` | Server banner URL |
+    | `[server.member_count]` | Number of members in the server |
+    | `[server.channel_count]` | Total number of channels |
+    | `[server.text_channel_count]` | Number of text channels |
+    | `[server.voice_channel_count]` | Number of voice channels |
+    | `[server.category_count]` | Number of channel categories |
+    | `[server.role_count]` | Number of roles |
+    | `[server.emoji_count]` | Number of custom emojis |
+    | `[server.sticker_count]` | Number of stickers |
+    | `[server.boost_count]` | Number of server boosts |
+  </Tab>
 
-### Ping on Join & DM on Join Variables
-Here are the variables you can use for the ping on join and the DM on join:
-- `[user_name]` username of the user
-- `[user_display_name]` display name of the user
-- `[user_mention]` mentions the user
-- `[server_name]` name of the server
-- `[server_owner]` owner of the server
-- `[server_owner_mention]` mentions the server owner
-- `[server_member_count]` member count of the server
+  <Tab title="Channel">
+    | Variable | Output |
+    |---------|--------|
+    | `[channel.id]` | Channel ID |
+    | `[channel.name]` | Channel name |
+    | `[channel.mention]` | Channel mention |
+    | `[channel.type]` | Channel type (text, voice, thread, etc.) |
+    | `[channel.category]` | Channel category name |
+  </Tab>
 
-<Note>You can find all this information by using the `bao variables` command.</Note>
+  <Tab title="Giveaway">
+    | Variable | Output |
+    |---------|--------|
+    | `[gw.prize]` | Giveaway prize |
+    | `[gw.winners]` | Number of winners |
+    | `[gw.host]` | Giveaway host mention |
+    | `[gw.duration]` | Giveaway end time |
+    | `[gw.timestamp]` | Relative Discord timestamp |
+    | `[gw.claim_time]` | Winner claim time |
+    | `[gw.reaction]` | Giveaway reaction emoji |
+    | `[gw.entry_mode]` | Entry method (`click on` / `react with`) |
+  </Tab>
+</Tabs>

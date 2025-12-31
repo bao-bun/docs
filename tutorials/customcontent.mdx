@@ -1,0 +1,148 @@
+---
+title: "Custom Contents"
+icon: "thumbtack"
+description: "This guide walks you through creating and managing **Custom Content**. Custom content is used by multiple features such as **Welcomer**, **DM on Join**, and **Giveaways**."
+---
+
+### What Custom Content does
+Custom content lets you define **reusable messages and embeds** that the bot can send automatically.  
+You can control:
+- Message text
+- Embedded messages
+- Variables and dynamic data
+- Reuse across multiple features
+
+Custom content allows you to change messages **without reconfiguring every command**.
+
+## Step 1: Create new content
+Start by creating a new piece of custom content.
+
+<CodeGroup>
+```javascript syntax
+/content create <content_name> <content_type>
+````
+
+</CodeGroup>
+
+- `content_name` is the name used to reference the content
+- `content_type` defines how the content behaves
+  Examples include `message`, `embed`, or other supported types
+
+Choose a descriptive name so it’s easy to recognize later.
+
+
+## Step 2: Set the content message
+After creating the content, define what it should send.
+
+<CodeGroup>
+```javascript syntax
+/content message <content_name> [message]
+```
+</CodeGroup>
+
+* `message` is the text sent when this content is used
+* Leaving `message` empty clears the message
+
+You can include variables such as:
+
+* `[user.mention]`
+* `[user.name]`
+* `[server.name]`
+
+## Step 3: (Optional) Customize an embed
+If your content supports embeds, you can fully customize how it looks.
+
+<CodeGroup>
+```javascript syntax
+/content embed <content_name>
+```
+</CodeGroup>
+
+- Opens an interactive embed editor
+- Allows you to customize title, description, colors, and fields
+- Embeds can also contain variables
+
+## Step 4: View your content
+
+Preview your content before using it in a feature.
+
+<CodeGroup>
+```javascript syntax
+/content view <content_name>
+```
+</CodeGroup>
+
+- Shows the current message and embed
+- Variables are previewed when possible
+
+This is useful for catching mistakes early.
+## Step 5: Use your content
+
+Once created, your content can be used in:
+
+- Welcomer
+- DM on Join
+- Giveaways
+
+Example usage:
+- `/welcomer content welcome-message`
+- `/dm content welcome-dm`
+- `/giveaway winner-message winner-message`
+
+## Step 6: Edit content type (optional)
+You can change how a content behaves after creation.
+
+<CodeGroup>
+```javascript syntax
+/content set-type <content_name> <content_type>
+```
+</CodeGroup>
+
+- Useful if you want to switch between message-based or embed-based content
+
+## Step 7: Remove content (optional)
+
+If a piece of content is no longer needed, you can delete it.
+
+<CodeGroup>
+```javascript syntax
+/content remove <content_name>
+```
+</CodeGroup>
+
+- This permanently removes the content
+- Any features using this content will need to be updated
+
+## Example workflow
+
+A typical setup might look like this:
+
+- Create content named `welcome-message`
+- Set a message using variables
+- Customize an embed
+- Assign the content to Welcomer
+
+Commands used:
+
+- `/content create welcome-message message`
+- `/content message welcome-message Welcome [user.mention] to **[server.name]**!`
+- `/content embed welcome-message`
+- `/welcomer content welcome-message`
+
+## Tips and best practices
+
+- Use clear, descriptive content names
+- Keep messages short and friendly
+- Use variables to personalize messages
+- Preview content before assigning it
+- Reuse content across multiple features
+
+## Troubleshooting
+
+If content does not appear correctly:
+
+- Make sure the content exists
+- Verify the content type is correct
+- Check variable spelling
+- Use `/content view` to preview output
+

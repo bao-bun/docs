@@ -1,0 +1,85 @@
+---
+title: "DM on Join"
+icon: "hashtag"
+description: "This guide walks you through setting up **DM on Join** from start to finish. By the end, new members will automatically receive a private message when they join your server."
+---
+
+### What DM on Join does
+DM on Join sends a **direct message** to users when they join your server.  
+You can control:
+- Whether DM on Join is enabled
+- What message content is sent
+- Testing messages before going live
+
+DM on Join does **not** use channels, delays, webhooks, or auto-deletion.  
+Messages are sent directly to the user’s DMs.
+
+## Step 1: Enable DM on Join
+The main setup command is `/dm toggle`.  
+This command enables or disables DM on Join for the server.
+
+<CodeGroup>
+```javascript syntax
+/dm enable
+````
+
+</CodeGroup>
+
+- Running this command enables DM on Join
+- Running it again disables DM on Join
+- The state is saved per server
+
+## Step 2: Assign DM content
+DM on Join uses **custom content** for the message sent to new members.
+
+<CodeGroup>
+```javascript syntax
+/dm content <content_name>
+```
+</CodeGroup>
+
+- `content_name` is the name of the custom content to use
+- The content should be written as a DM-friendly message
+- You can update this at any time without disabling DM on Join
+
+Tip: Use `/content view` to preview the message before assigning it.
+
+## Step 3: Test your setup
+Before waiting for a real user to join, send a test DM.
+
+<CodeGroup>
+```javascript syntax
+/dm test
+```
+</CodeGroup>
+
+- Sends a test DM to you using the current configuration
+- Confirms that content and permissions are working
+
+## Example setup
+A typical setup might look like this:
+
+- DM on Join: enabled
+- Content: `welcome-dm`
+
+Commands used:
+
+- `/dm enable`
+- `/dm content welcome-dm`
+- `/dm test`
+
+## Tips and best practices
+- Keep DM messages short and friendly
+- Avoid sending too many links in DMs
+- Use variables like `[user.name]` and `[server.name]`
+- Always test before enabling on large servers
+
+## Troubleshooting
+If DM on Join is not sending messages:
+
+- Make sure DM on Join is enabled
+- Verify content exists and is assigned
+- Ensure users have DMs open from server members
+- Run `/dm test` to confirm configuration
+
+

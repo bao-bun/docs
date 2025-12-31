@@ -1,0 +1,105 @@
+---
+title: "Configuration"
+icon: "gear"
+description: "This page shows you how to configure your giveaways."
+---
+
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### Set giveaway embed
+Set the embed content used for giveaways.
+
+<CodeGroup>
+```javascript syntax
+/giveaway embed <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use as the giveaway embed.
+
+### Set reaction
+Set the reaction emoji used for giveaways.
+
+<CodeGroup>
+```javascript syntax
+/giveaway reaction <reaction>
+```
+</CodeGroup>
+
+- `reaction` (text) — required
+  The emoji used for giveaway reactions.
+
+### Set winner message
+Set the message sent when winners are chosen.
+
+<CodeGroup>
+```javascript syntax
+/giveaway winner-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the winner message.
+
+### Set deny message
+Set the deny message for button-mode giveaways.
+
+<CodeGroup>
+```javascript syntax
+/giveaway deny-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the deny message.
+
+### Set claim-time message
+Set the claim-time reminder message for giveaways.
+
+<CodeGroup>
+```javascript syntax
+/giveaway claim-time-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the claim-time message.
+
+### Set claim-time-over message
+Set the message sent when claim time expires.
+
+<CodeGroup>
+```javascript syntax
+/giveaway claim-time-over-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the claim-time-over message.
+
+### Set accept message
+Set the accept message for button-mode giveaways.
+
+<CodeGroup>
+```javascript syntax
+/giveaway accept-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the accept message.
+
+### Set void message
+Set the message sent when there are no valid entries.
+
+<CodeGroup>
+```javascript syntax
+/giveaway no-entries-message <content_name>
+```
+</CodeGroup>
+
+- `content_name` (text) — required
+  The custom content name to use for the no-entry message.

@@ -11,8 +11,7 @@
     "seo": {
         "metatags": {
             "theme-color": "#e3c2cd",
-            "og:site_name": "baobun.dev",
-            "canonical": "https://docs.baobun.dev"
+            "og:site_name": "baobun.dev"
         }
     },
     "navigation": {
@@ -20,35 +19,37 @@
             {
                 "group": "Overview",
                 "pages": [
-                    "introduction"
+                    "overview/introduction",
+                    "overview/support"
                 ]
             },
             {
-                "group": "Server Configuration",
+                "group": "Modules",
                 "pages": [
                     {
                         "group": "Giveaways",
                         "icon": "party-horn",
-                        "pages": ["config/giveaway/managment", "config/giveaway/configuration", "config/giveaway/presets"]
+                        "pages": ["modules/giveaway/managment", "modules/giveaway/configuration", "modules/giveaway/presets"]
                     },
 
                     {
                         "group": "Guild",
                         "icon": "house",
-                        "pages": ["config/guild/pingonjoin", "config/guild/dmonjoin"]
+                        "pages": ["modules/guild/welcomer", "modules/guild/dmonjoin", "modules/guild/customcontents", "modules/guild/customization"]
+                    },
+                    {
+                        "group": "Utility",
+                        "icon": "screwdriver",
+                        "pages": ["modules/utility/misc", "modules/utility/info", "modules/utility/reminder"]
                     }
                 ]
             },
             {
-                "group": "Server Commands",
+                "group": "Tutorials",
                 "pages": [
-                    {
-                        "group": "Moderation",
-                        "icon": "lock",
-                        "pages": ["features/moderation/purge"]
-                    },
-                    "features/timediff",
-                    "features/channels"
+                    "tutorials/customcontent",
+                    "tutorials/welcomer",
+                    "tutorials/dm"
                 ]
             },
             {
