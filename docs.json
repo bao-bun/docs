@@ -47,9 +47,9 @@
             {
                 "group": "Tutorials",
                 "pages": [
+                    "tutorials/customcontent",
                     "tutorials/welcomer",
-                    "tutorials/dm",
-                    "tutorials/customcontent"
+                    "tutorials/dm"
                 ]
             },
             {
