@@ -1,81 +1,91 @@
 {
-    "$schema": "https://mintlify.com/docs.json",
-    "theme": "mint",
-    "name": "baobun docs",
-    "description": "documentation for baobun",
-    "colors": {
-        "primary": "#e57a9e",
-        "light": "#f7c0d0",
-        "dark": "#d44d76"
-    },
-    "seo": {
-        "metatags": {
-            "theme-color": "#e3c2cd",
-            "og:site_name": "baobun.dev"
-        }
-    },
-    "navigation": {
-        "groups": [
-            {
-                "group": "Overview",
-                "pages": [
-                    "overview/introduction",
-                    "overview/support"
-                ]
-            },
-            {
-                "group": "Modules",
-                "pages": [
-                    {
-                        "group": "Giveaways",
-                        "icon": "party-horn",
-                        "pages": ["modules/giveaway/managment", "modules/giveaway/configuration", "modules/giveaway/presets"]
-                    },
-
-                    {
-                        "group": "Guild",
-                        "icon": "house",
-                        "pages": ["modules/guild/welcomer", "modules/guild/dmonjoin", "modules/guild/customcontents", "modules/guild/customization"]
-                    },
-                    {
-                        "group": "Utility",
-                        "icon": "screwdriver",
-                        "pages": ["modules/utility/misc", "modules/utility/info", "modules/utility/reminder"]
-                    }
-                ]
-            },
-            {
-                "group": "Tutorials",
-                "pages": [
-                    "tutorials/customcontent",
-                    "tutorials/welcomer",
-                    "tutorials/dm"
-                ]
-            },
-            {
-                "group": "Resources",
-                "pages": [
-                    "resources/message_id",
-                    "resources/syntax",
-                    "resources/variables",
-                    "resources/embed_layout"
-                ]
-            }
-        ]
-    },
-    "favicon": "favicon.ico",
-    "navbar": {
-        "links": [
-            {
-                "label": "Support Server",
-                "href": "https://discord.gg/AXRShswtZ4"
-            }
-        ]
-    },
-    "footer": {
-        "socials": {
-            "discord": "https://discord.gg/AXRShswtZ4",
-            "github": "https://github.com/bao-bun"
-        }
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "baobun docs",
+  "description": "documentation for baobun",
+  "colors": {
+    "primary": "#e57a9e",
+    "light": "#f7c0d0",
+    "dark": "#d44d76"
+  },
+  "seo": {
+    "metatags": {
+      "theme-color": "#e3c2cd",
+      "og:site_name": "baobun.dev"
     }
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": ["overview/introduction", "overview/support"]
+      },
+      {
+        "group": "Modules",
+        "pages": [
+          {
+            "group": "Giveaways",
+            "icon": "party-horn",
+            "pages": [
+              "modules/giveaway/managment",
+              "modules/giveaway/configuration",
+              "modules/giveaway/presets"
+            ]
+          },
+
+          {
+            "group": "Guild",
+            "icon": "house",
+            "pages": [
+              "modules/guild/welcomer",
+              "modules/guild/dmonjoin",
+              "modules/guild/customcontents",
+              "modules/guild/customization"
+            ]
+          },
+          {
+            "group": "Utility",
+            "icon": "sliders",
+            "pages": [
+              "modules/utility/channels",
+              "modules/utility/info",
+              "modules/utility/reminder"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Tutorials",
+        "pages": [
+          "tutorials/customcontent",
+          "tutorials/welcomer",
+          "tutorials/dm"
+        ]
+      },
+      {
+        "group": "Resources",
+        "pages": [
+          "resources/message_id",
+          "resources/syntax",
+          "resources/variables",
+          "resources/embed_layout"
+        ]
+      }
+    ]
+  },
+  "favicon": "favicon.ico",
+  "navbar": {
+    "links": [
+      {
+        "label": "Support Server",
+        "href": "https://discord.gg/AXRShswtZ4"
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "discord": "https://discord.gg/AXRShswtZ4",
+      "github": "https://github.com/bao-bun"
+    }
+  }
 }
