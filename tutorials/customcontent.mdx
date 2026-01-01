@@ -26,7 +26,8 @@ Start by creating a new piece of custom content.
 
 - `content_name` is the name used to reference the content
 - `content_type` defines how the content behaves
-  Examples include `message`, `embed`, or other supported types
+
+Examples include `gw` (giveaway), `welc` (welcomer), `doj` (dm on join), and other supported types
 
 Choose a descriptive name so it’s easy to recognize later.
 
@@ -40,14 +41,14 @@ After creating the content, define what it should send.
 ```
 </CodeGroup>
 
-* `message` is the text sent when this content is used
-* Leaving `message` empty clears the message
+- `message` is the text sent when this content is used
+- Leaving `message` empty clears the message
 
 You can include variables such as:
 
-* `[user.mention]`
-* `[user.name]`
-* `[server.name]`
+- `[user.mention]`
+- `[user.name]`
+ `[server.name]`
 
 ## Step 3: (Optional) Customize an embed
 If your content supports embeds, you can fully customize how it looks.
