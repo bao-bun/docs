@@ -18,7 +18,7 @@
     "groups": [
       {
         "group": "Overview",
-        "pages": ["overview/introduction", "overview/support"]
+        "pages": ["overview/introduction", "overview/support", "overview/links"]
       },
       {
         "group": "Modules",
