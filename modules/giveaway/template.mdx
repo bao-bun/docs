@@ -1,0 +1,58 @@
+---
+title: "Template"
+icon: "map"
+description: "Manage and reuse giveaway templates."
+---
+
+
+<Warning>
+`<>` means required, `[]` means optional
+</Warning>
+
+### View templates
+View all created giveaway templates.
+
+<CodeGroup>
+```javascript syntax
+/template list
+````
+</CodeGroup>
+
+*No parameters*
+
+### Create a template
+Create a new giveaway template.
+
+<CodeGroup>
+```javascript syntax
+/template create <template_name>
+```
+</CodeGroup>
+
+- `template_name` (text) — required
+  The name you want to give the template
+
+
+### Edit a template
+Edit an existing giveaway template.
+
+<CodeGroup>
+```javascript syntax
+/template edit <template_name>
+```
+</CodeGroup>
+
+- `template_name` (text) — required
+  The name of the template you want to edit
+
+### Remove a template
+Remove an existing giveaway template.
+
+<CodeGroup>
+```javascript syntax
+/template remove <template_name>
+```
+</CodeGroup>
+
+- `template_name` (text) — required
+  The name of the template you want to remove

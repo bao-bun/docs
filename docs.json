@@ -29,7 +29,7 @@
                     {
                         "group": "Giveaways",
                         "icon": "party-horn",
-                        "pages": ["modules/giveaway/managment", "modules/giveaway/configuration", "modules/giveaway/presets"]
+                        "pages": ["modules/giveaway/managment", "modules/giveaway/configuration", "modules/giveaway/preset", "modules/giveaway/template"]
                     },
 
                     {
