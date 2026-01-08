@@ -29,7 +29,8 @@
             "pages": [
               "modules/giveaway/managment",
               "modules/giveaway/configuration",
-              "modules/giveaway/presets"
+              "modules/giveaway/preset",
+              "modeules/giveaway/template"
             ]
           },
 
