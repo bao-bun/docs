@@ -16,6 +16,11 @@
       "canonical": "https://docs.baobun.dev"
     }
   },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-ECT0R7C9NE"
+    }
+  },
   "navigation": {
     "groups": [
       {
