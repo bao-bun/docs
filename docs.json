@@ -12,7 +12,7 @@
     "indexing": "all",
     "metatags": {
       "theme-color": "#e3c2cd",
-      "og:site_name": "baobun.dev",
+      "og:site_name": "https://www.baobun.dev",
       "canonical": "https://docs.baobun.dev"
     }
   },
