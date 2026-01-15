@@ -76,6 +76,10 @@
       }
     ]
   },
+  "logo": {
+    "light": "https://www.baobun.dev/bot.png",
+    "dark": "https://www.baobun.dev/bot.png"
+  },
   "favicon": "favicon.ico",
   "navbar": {
     "links": [
