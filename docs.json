@@ -9,9 +9,11 @@
     "dark": "#d44d76"
   },
   "seo": {
+    "indexing": "all",
     "metatags": {
       "theme-color": "#e3c2cd",
-      "og:site_name": "baobun.dev"
+      "og:site_name": "baobun.dev",
+      "canonical": "https://docs.baobun.dev"
     }
   },
   "navigation": {
