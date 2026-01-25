@@ -5,8 +5,10 @@ description: "This guide walks you through creating and managing **Custom Conten
 ---
 
 ### What Custom Content does
+
 Custom content lets you define **reusable messages and embeds** that the bot can send automatically.  
 You can control:
+
 - Message text
 - Embedded messages
 - Variables and dynamic data
@@ -15,6 +17,7 @@ You can control:
 Custom content allows you to change messages **without reconfiguring every command**.
 
 ## Step 1: Create new content
+
 Start by creating a new piece of custom content.
 
 <CodeGroup>
@@ -31,8 +34,8 @@ Examples include `gw` (giveaway), `welc` (welcomer), `doj` (dm on join), and oth
 
 Choose a descriptive name so it’s easy to recognize later.
 
-
 ## Step 2: Set the content message
+
 After creating the content, define what it should send.
 
 <CodeGroup>
@@ -48,9 +51,10 @@ You can include variables such as:
 
 - `[user.mention]`
 - `[user.name]`
- `[server.name]`
+- `[server.name]`
 
 ## Step 3: (Optional) Customize an embed
+
 If your content supports embeds, you can fully customize how it looks.
 
 <CodeGroup>
@@ -77,6 +81,7 @@ Preview your content before using it in a feature.
 - Variables are previewed when possible
 
 This is useful for catching mistakes early.
+
 ## Step 5: Use your content
 
 Once created, your content can be used in:
@@ -86,11 +91,13 @@ Once created, your content can be used in:
 - Giveaways
 
 Example usage:
+
 - `/welcomer content welcome-message`
 - `/dm content welcome-dm`
 - `/giveaway winner-message winner-message`
 
 ## Step 6: Edit content type (optional)
+
 You can change how a content behaves after creation.
 
 <CodeGroup>
@@ -146,4 +153,3 @@ If content does not appear correctly:
 - Verify the content type is correct
 - Check variable spelling
 - Use `/content view` to preview output
-

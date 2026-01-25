@@ -9,6 +9,7 @@ description: "Utilities for managing and moderating channels and threads."
 </Warning>
 
 ### Message time difference
+
 Get the time difference between two messages.
 
 <CodeGroup>
@@ -24,55 +25,43 @@ Get the time difference between two messages.
   The ID of the second message.
 
 ### Purge messages
+
 Delete multiple messages from a channel.
 
-<CodeGroup>
-```javascript syntax
-/purge [amount] [before] [after]
-```
-</CodeGroup>
+<CodeGroup>```javascript syntax /purge [amount] [before] [after] ```</CodeGroup>
 
 - `amount` (number) — optional
   The number of messages to delete (1–2000).
 - `before` (text) — optional
-  The message ID to purge up to
+  The message ID to purge up to.
 - `after` (text) — optional
-  The message ID to purge after to
+  The message ID to purge after.
 
 ### Lock a channel or thread
+
 Lock a channel or thread to prevent interaction.
 
-<CodeGroup>
-```javascript syntax
-/lock [channel]
-```
-</CodeGroup>
+<CodeGroup>```javascript syntax /lock [channel] ```</CodeGroup>
 
 - `channel` (channel | thread) — optional
   The channel or thread to lock.
   If not provided, the current channel or thread is used.
 
 ### Hide a channel or thread
+
 Hide or archive a channel or thread.
 
-<CodeGroup>
-```javascript syntax
-/hide [channel]
-```
-</CodeGroup>
+<CodeGroup>```javascript syntax /hide [channel] ```</CodeGroup>
 
 - `channel` (channel | thread) — optional
   The channel or thread to hide or archive.
   If not provided, the current channel or thread is used.
 
-
-
 ### Rename a channel
+
 Rename a channel.
 
-<Note>
-This command is rate-limited per channel.
-</Note>
+<Note>This command is rate-limited per channel.</Note>
 
 <CodeGroup>
 ```javascript syntax
@@ -87,26 +76,20 @@ This command is rate-limited per channel.
   The new name for the channel.
 
 ### Delete a channel
+
 Delete a channel with confirmation.
 
-<CodeGroup>
-```javascript syntax
-/delete [channel]
-```
-</CodeGroup>
+<CodeGroup>```javascript syntax /delete [channel] ```</CodeGroup>
 
 - `channel` (channel) — optional
   The channel you want to delete.
   If not provided, the current channel is used.
 
 ### Nuke a channel
+
 Delete and recreate a channel with confirmation.
 
-<CodeGroup>
-```javascript syntax
-/nuke [channel] [delete_after]
-```
-</CodeGroup>
+<CodeGroup>```javascript syntax /nuke [channel] [delete_after] ```</CodeGroup>
 
 - `channel` (channel) — optional
   The channel you want to nuke.
@@ -115,31 +98,23 @@ Delete and recreate a channel with confirmation.
   Time in seconds before deleting the channel.
 
 ### Clone a channel
+
 Create a copy of a channel.
 
-<CodeGroup>
-```javascript syntax
-/clone [channel]
-```
-</CodeGroup>
+<CodeGroup>```javascript syntax /clone [channel] ```</CodeGroup>
 
 - `channel` (channel) — optional
   The channel you want to clone.
   If not provided, the current channel is used.
 
 ### Move a channel
+
 Move a channel to a different category.
 
-<CodeGroup>
-```javascript syntax
-/movech [category] [channel]
-```
-</CodeGroup>
+<CodeGroup>```javascript syntax /movech [category] [channel] ```</CodeGroup>
 
 - `category` (category) — optional
   The category to move the channel to.
 - `channel` (channel) — optional
   The channel you want to move.
   If not provided, the current channel is used.
-
-
