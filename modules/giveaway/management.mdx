@@ -12,49 +12,49 @@ description: "Create, manage, and customize giveaways."
 Create a quick and classic giveaway with minimal setup.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /giveaway quick <duration> <winners> [channel] <prize>
-````
+```
 
 </CodeGroup>
 
-- `duration` (time) — required
+- `duration` (time): required
   The duration of the giveaway.
-- `winners` (number) — required
+- `winners` (number): required
   The number of winners for the giveaway.
-- `channel` (channel) — optional
+- `channel` (channel): optional
   The channel where the giveaway will be created.
-- `prize` (text) — required
+- `prize` (text): required
   The prize for the giveaway.
 
 ### Start giveaway
 Create a fully customizable giveaway.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /giveaway start <duration> <winners> [channel] <prize>
 ```
 </CodeGroup>
 
-- `duration` (time) — required
+- `duration` (time): required
   The duration of the giveaway.
-- `winners` (number) — required
+- `winners` (number): required
   The number of winners for the giveaway.
-- `channel` (channel) — optional
+- `channel` (channel): optional
   The channel where the giveaway will be created.
-- `prize` (text) — required
+- `prize` (text): required
   The prize for the giveaway.
 
 ### Template giveaway
 Create a fully customizable giveaway.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /giveaway template <template_name>
 ```
 </CodeGroup>
 
-- `template_name` (text) — required
+- `template_name` (text): required
   The name of the template.
 
 
@@ -62,26 +62,26 @@ Create a fully customizable giveaway.
 Reroll winners for an ended giveaway using its message ID.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /giveaway reroll <message_id> [winners]
 ```
 </CodeGroup>
 
-- `message_id` (text) — required
+- `message_id` (text): required
   The message ID of the giveaway embed.
-- `winners` (number) — optional
+- `winners` (number): optional
   The number of winners to reroll.
 
 ### End giveaway
 End an ongoing giveaway early.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /giveaway end <message_id>
 ```
 </CodeGroup>
 
-- `message_id` (text) — required
+- `message_id` (text): required
   The message ID of the giveaway embed.
 
 ### Edit giveaway
@@ -93,5 +93,5 @@ Edit an ongoing giveaway using its message ID.
 ```
 </CodeGroup>
 
-- `message_id` (text) — required
+- `message_id` (text): required
   The message ID of the giveaway embed.

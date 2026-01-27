@@ -16,47 +16,47 @@ You can control:
 
 ## Step 1: Add a welcome channel
 
-The main setup command is `/welcomer add`.  
+The main setup command is **/welcomer add**.  
 This command supports **multiple parameters**, allowing you to configure everything at once.
 
 <CodeGroup>
 ``` syntax
 /welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
-````
+```
 
 </CodeGroup>
 
 ### Parameters explained
 
-- `channel` — optional
+- `channel` (optional) <br/>
   The channel that will receive welcome messages
   If omitted, the current channel is used
 
-- `content_name` — optional
+- `content_name` (optional) <br/>
   The custom content used for the welcome message
-  You can change this later using `/welcomer set`
+  You can change this later using **/welcomer set**
 
-- `delay` — optional
+- `delay` (optional) <br/>
   How long to wait before sending the welcome message
-  Examples: `5s`, `30s`, `1m`
+  Examples: **5s**, **1m**, **10m**
 
-- `delete_after` — optional
+- `delete_after` (optional) <br/>
   How long before the welcome message is automatically deleted
-  Examples: `30s`, `5m`, `1h`
-  Set to `0s` to disable auto-deletion
+  Examples: **30s**, **5m**, **1h**
+  Set to **0s** to disable auto-deletion
 
-- `enable` — optional (default: true)
+- `enable` (optional, default: true) <br/>
   Whether the welcomer should be enabled immediately
 
-- `webhook_name` — optional
+- `webhook_name` (optional) <br/>
   The name of the webhook used to send welcome messages
-  Defaults to `baobun | welcomer`
+  Defaults to **baobun**
 
 ## Step 2: Update content (optional)
-If you didn’t assign content during setup, or want to change it later:
+If you didn't assign content during setup, or want to change it later:
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer content <content_name> [channel]
 ```
 </CodeGroup>
@@ -67,7 +67,7 @@ If you didn’t assign content during setup, or want to change it later:
 You can change the delay at any time.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer delay <delay> [channel]
 ```
 </CodeGroup>
@@ -78,19 +78,19 @@ You can change the delay at any time.
 Change or disable auto-deletion for welcome messages.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer delete-after <time> [channel]
 ```
 </CodeGroup>
 
 - Keeps welcome channels clean
-- Set to `0s` to keep messages permanently
+- Set to **0s** to keep messages permanently
 
 ## Step 5: Enable or disable Welcomer
 Toggle the welcomer on or off for a channel.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer enable [channel]
 ```
 </CodeGroup>
@@ -101,7 +101,7 @@ Toggle the welcomer on or off for a channel.
 Always test before going live.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer test
 ```
 </CodeGroup>
@@ -109,26 +109,26 @@ Always test before going live.
 - Sends a test welcome message using the current configuration
 
 ## Example full setup (one command)
-Here’s an example of configuring everything at once:
+Here's an example of configuring everything at once:
 
 <CodeGroup>
-``` syntax
-/welcomer add #welcome default-welcome 5s 1m true "Welcome Bot"
+```js Syntax
+/welcomer add #welcome default-welcome 5s 1m true "Welcomer"
 ```
 </CodeGroup>
 
 This setup:
 
-- Sends messages in `#welcome`
-- Uses `default-welcome` content
+- Sends messages in **#welcome**
+- Uses **default-welcome** content
 - Delays messages by 5 seconds
 - Enables Welcomer immediately
 - Uses a custom webhook name
 - Deletes messages after 1 minute
 
 ## Tips and best practices
-- Use variables like `[user.mentions]` and `[server.name]` in your content
-- Set `delete_after` for busy servers
+- Use variables like **[user.mentions]** and **[server.name]** in your content
+- Set **delete_after** for busy servers
 - Use webhooks to make messages look cleaner
 - Test after every change
 
@@ -139,5 +139,4 @@ If welcome messages are not sending:
 - Confirm the channel is enabled
 - Verify content exists
 - Check delay and delete timers
-- Run `/welcomer test`
-
+- Run **/welcomer test**
