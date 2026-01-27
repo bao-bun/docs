@@ -5,49 +5,53 @@ description: "DM on Join privately messages new members who just joined the serv
 ---
 
 <Warning>
-`<>` means required, `[]` means optional
+`<>` means an argument is required, `[]` means it's optional
 </Warning>
 
-### Enabling DM on Join
 
+### Enabling DM on Join
 Enable or disable DM on Join.
 
-<CodeGroup>``` syntax /dm enable ````</CodeGroup>
+<CodeGroup>
+```js Syntax
+/dm enable
+```
+</CodeGroup>
 
-_No parameters_
 
 ### Setting DM content
-
 Set the content used for DM on Join messages.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /dm content <content_name>
 ```
 </CodeGroup>
 
-- `content_name` (text) — required
+- `content_name` (text): required <br/>
   The content name you want to use for DM on Join messages.
 
-### Setting DM delay
 
+### Setting DM delay
 Set the delay for DM on Join messages.
 
 <Note>Setting a delay of 0s sets no delay for the DM on join message</Note>
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /dm delay <delay>
 ```
 </CodeGroup>
 
-- `delay` (time) — required
+- `delay` (time): required <br/>
   The delay duration you want to delay DM on Join messages.
 
-### Test sending
 
+### Test sending
 Run a test DM for DM on Join.
 
-<CodeGroup>``` syntax /dm test ```</CodeGroup>
-
-_No parameters_
+<CodeGroup>
+```js Syntax
+/dm test
+```
+</CodeGroup>

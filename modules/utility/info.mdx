@@ -5,31 +5,30 @@ description: "View detailed information about servers, users, roles, invites, an
 ---
 
 <Warning>
-`<>` means required, `[]` means optional
+`<>` means an argument is required, `[]` means it's optional
 </Warning>
+
 
 ### Server information
 Display detailed information about the current server.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /serverinfo
-````
-
+```
 </CodeGroup>
 
-*No parameters*
 
 ### Invite information
 Get information about a Discord invite link or code.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /inviteinfo [invite]
 ```
 </CodeGroup>
 
-- `invite` (invite) — optional
+- `invite` (invite): optional <br/>
   The invite link or code you want to check.
   If not provided, the current server invite is used when possible.
 
@@ -37,62 +36,49 @@ Get information about a Discord invite link or code.
 Display information about a user or server member.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /userinfo [user]
 ```
 </CodeGroup>
 
-- `user` (user | member) — optional
+- `user` (user | member): optional <br/>
   The user or member you want to view information for.
   If not provided, your own user information is shown.
+
 
 ### Role information
 Display information about a server role.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /roleinfo <role>
 ```
 </CodeGroup>
 
-- `role` (role) — required
+- `role` (role): required <br/>
   The role you want to view information for.
+
 
 ### Bot information
 Display information about the bot, including statistics and useful links.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /botinfo
 ```
 </CodeGroup>
-
-*No parameters*
-
-### Server avatar
-Display a member’s server-specific avatar.
-
-<CodeGroup>
-``` syntax
-/serveravatar [member]
-```
-</CodeGroup>
-
-- `member` (member) — optional
-  The member whose server avatar you want to display.
-  If not provided, your own server avatar is shown.
 
 
 ### Show Discord ID
 Get the Discord ID of almost any entity.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /show-id [source]
 ```
 </CodeGroup>
 
-- `source` (channel | user | role | emoji | thread) — optional
+- `source` (channel | user | role | emoji | thread): optional <br/>
   The entity you want to get the ID for.
   Supported types include channels, users, roles, threads, and emojis.
 

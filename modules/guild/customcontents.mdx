@@ -5,85 +5,90 @@ description: "Manage and customize content used by other modules."
 ---
 
 <Warning>
-`<>` means required, `[]` means optional
+`<>` means an argument is required, `[]` means it's optional
 </Warning>
+
 
 ### Viewing content
 View an existing custom content.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content view <content_name>
-````
+```
 
 </CodeGroup>
 
-- `content_name` (text) — required
+- `content_name` (text): required <br/>
   The name of the custom content you want to view.
+
 
 ### Creating content
 Create a new custom content.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content create <content_name> <content_type>
 ```
 </CodeGroup>
 
-- `content_name` (text) — required
+- `content_name` (text): required <br/>
   The name you want to assign to the new custom content.
-- `content_type` (text) — required
+- `content_type` (text): required <br/>
   The type of content to create.
+
 
 ### Removing content
 Remove an existing custom content.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content remove <content_name>
 ```
 </CodeGroup>
 
-- `content_name` (text) — required
+- `content_name` (text): required <br/>
   The name of the content you want to remove.
+
 
 ### Changing content type
 Change the type of an existing custom content.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content type <content_name> <content_type>
 ```
 </CodeGroup>
 
-- `content_name` (text) — required
+- `content_name` (text): required <br/>
   The name of the content you want to change.
-- `content_type` (text) — required
+- `content_type` (text): required <br/>
   The content type you want to switch to.
+
 
 ### Setting content message
 Set or update the message for a custom content.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content message <content_name> [message]
 ```
 </CodeGroup>
 
-- `content_name` (text) — required
+- `content_name` (text): required <br/>
   The name of the content you want to set a message for.
-- `message` (text) — optional
+- `message` (text): optional <br/>
   The message you want to assign to the content.
 
 ### Customizing content embed
 Customize the embed used for a custom content.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content embed <content_name>
 ```
 </CodeGroup>
 
-- `content_name` (text) — required
+- `content_name` (text): required <br/>
   The name of the content you want to customize the embed for.
 

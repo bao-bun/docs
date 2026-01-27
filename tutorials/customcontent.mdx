@@ -1,12 +1,12 @@
 ---
 title: "Custom Contents"
-icon: "thumbtack"
-description: "This guide walks you through creating and managing **Custom Content**. Custom content is used by multiple features such as **Welcomer**, **DM on Join**, and **Giveaways**."
+icon: "icons"
+description: "This guide walks you through creating and managing **Custom Contents**. Custom Contents are used by multiple features such as **Welcomer**, **DM on Join**, and **Giveaways**."
 ---
 
-### What Custom Content does
 
-Custom content lets you define **reusable messages and embeds** that the bot can send automatically.  
+### What Custom Contents do
+Custom Contents let you define **reusable messages and embeds** that the bot can send automatically.  
 You can control:
 
 - Message text
@@ -14,32 +14,32 @@ You can control:
 - Variables and dynamic data
 - Reuse across multiple features
 
-Custom content allows you to change messages **without reconfiguring every command**.
+Custom Contents allow you to change messages **without reconfiguring every command**.
+
 
 ## Step 1: Create new content
-
 Start by creating a new piece of custom content.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content create <content_name> <content_type>
-````
-
+```
 </CodeGroup>
 
 - `content_name` is the name used to reference the content
 - `content_type` defines how the content behaves
 
-Examples include `gw` (giveaway), `welc` (welcomer), `doj` (dm on join), and other supported types
+Examples include `gw` (giveaway), `welc` (welcomer), `doj` (dm on join), and other supported types.
+You can select the types on the dashboard and in the slash command interface.
 
-Choose a descriptive name so it’s easy to recognize later.
+Choose a descriptive name so it's easy to recognize later.
+
 
 ## Step 2: Set the content message
-
 After creating the content, define what it should send.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content message <content_name> [message]
 ```
 </CodeGroup>
@@ -53,12 +53,13 @@ You can include variables such as:
 - `[user.name]`
 - `[server.name]`
 
-## Step 3: (Optional) Customize an embed
+Learn more about available variables in the [Variables Guide](/resources/variables).
 
+## Step 3: (Optional) Customize an embed
 If your content supports embeds, you can fully customize how it looks.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content embed <content_name>
 ```
 </CodeGroup>
@@ -67,12 +68,12 @@ If your content supports embeds, you can fully customize how it looks.
 - Allows you to customize title, description, colors, and fields
 - Embeds can also contain variables
 
-## Step 4: View your content
 
+## Step 4: View your content
 Preview your content before using it in a feature.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content view <content_name>
 ```
 </CodeGroup>
@@ -82,8 +83,8 @@ Preview your content before using it in a feature.
 
 This is useful for catching mistakes early.
 
-## Step 5: Use your content
 
+## Step 5: Use your content
 Once created, your content can be used in:
 
 - Welcomer
@@ -96,24 +97,24 @@ Example usage:
 - `/dm content welcome-dm`
 - `/giveaway winner-message winner-message`
 
-## Step 6: Edit content type (optional)
 
+## Step 6: Edit content type (optional)
 You can change how a content behaves after creation.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content type <content_name> <content_type>
 ```
 </CodeGroup>
 
 - Useful if you want to switch between message-based or embed-based content
 
-## Step 7: Remove content (optional)
 
+## Step 7: Remove content (optional)
 If a piece of content is no longer needed, you can delete it.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /content remove <content_name>
 ```
 </CodeGroup>
@@ -121,35 +122,32 @@ If a piece of content is no longer needed, you can delete it.
 - This permanently removes the content
 - Any features using this content will need to be updated
 
-## Example workflow
 
+## Example setup
 A typical setup might look like this:
-
 - Create content named `welcome-message`
 - Set a message using variables
 - Customize an embed
 - Assign the content to Welcomer
 
 Commands used:
-
 - `/content create welcome-message message`
 - `/content message welcome-message Welcome [user.mention] to **[server.name]**!`
 - `/content embed welcome-message`
 - `/welcomer content welcome-message`
 
-## Tips and best practices
 
-- Use clear, descriptive content names
-- Keep messages short and friendly
-- Use variables to personalize messages
+## Tips and best practices
+- Use the dashboard for easier management and editing
+- Use descriptive and easy to recognize content names
 - Preview content before assigning it
-- Reuse content across multiple features
+
 
 ## Troubleshooting
-
 If content does not appear correctly:
-
 - Make sure the content exists
 - Verify the content type is correct
-- Check variable spelling
+- Check variable spelling closely
 - Use `/content view` to preview output
+
+For further assistance, refer to the [Support Guide](/resources/support).

@@ -1,8 +1,9 @@
 ---
 title: "Welcomer"
-icon: "hashtag"
+icon: "at"
 description: "This guide walks you through setting up **Welcomer** from start to finish. By the end, your server will automatically send a welcome message when new members join."
 ---
+
 
 ### What Welcomer does
 Welcomer sends a message in a channel when a new member joins your server.  
@@ -14,20 +15,19 @@ You can control:
 - Whether the welcomer is enabled
 - What webhook name is used
 
-## Step 1: Add a welcome channel
 
+## Step 1: Add a welcome channel
 The main setup command is **/welcomer add**.  
 This command supports **multiple parameters**, allowing you to configure everything at once.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
 ```
 
 </CodeGroup>
 
 ### Parameters explained
-
 - `channel` (optional) <br/>
   The channel that will receive welcome messages
   If omitted, the current channel is used
@@ -52,6 +52,7 @@ This command supports **multiple parameters**, allowing you to configure everyth
   The name of the webhook used to send welcome messages
   Defaults to **baobun**
 
+
 ## Step 2: Update content (optional)
 If you didn't assign content during setup, or want to change it later:
 
@@ -63,6 +64,7 @@ If you didn't assign content during setup, or want to change it later:
 
 - This updates the content without re-adding the channel
 
+
 ## Step 3: Adjust timing (optional)
 You can change the delay at any time.
 
@@ -73,6 +75,7 @@ You can change the delay at any time.
 </CodeGroup>
 
 - Useful if you want to fine-tune when the message appears
+
 
 ## Step 4: Control message deletion (optional)
 Change or disable auto-deletion for welcome messages.
@@ -86,6 +89,7 @@ Change or disable auto-deletion for welcome messages.
 - Keeps welcome channels clean
 - Set to **0s** to keep messages permanently
 
+
 ## Step 5: Enable or disable Welcomer
 Toggle the welcomer on or off for a channel.
 
@@ -96,6 +100,7 @@ Toggle the welcomer on or off for a channel.
 </CodeGroup>
 
 - Useful for temporarily disabling welcomes without removing configuration
+
 
 ## Step 6: Test your setup
 Always test before going live.
@@ -108,6 +113,7 @@ Always test before going live.
 
 - Sends a test welcome message using the current configuration
 
+
 ## Example full setup (one command)
 Here's an example of configuring everything at once:
 
@@ -118,19 +124,18 @@ Here's an example of configuring everything at once:
 </CodeGroup>
 
 This setup:
-
 - Sends messages in **#welcome**
 - Uses **default-welcome** content
 - Delays messages by 5 seconds
 - Enables Welcomer immediately
-- Uses a custom webhook name
+- Uses a custom webhook name of "Welcomer"
 - Deletes messages after 1 minute
 
+
 ## Tips and best practices
-- Use variables like **[user.mentions]** and **[server.name]** in your content
-- Set **delete_after** for busy servers
-- Use webhooks to make messages look cleaner
 - Test after every change
+- Set **delete_after** for busy servers
+- Use webhooks to make messages look cleaner with your own branding
 
 ## Troubleshooting
 If welcome messages are not sending:
@@ -140,3 +145,5 @@ If welcome messages are not sending:
 - Verify content exists
 - Check delay and delete timers
 - Run **/welcomer test**
+
+For further assistance, refer to the [Support Guide](/resources/support).

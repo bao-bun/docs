@@ -5,101 +5,113 @@ description: "Welcomer sends messages to channels when a new member joins."
 ---
 
 <Warning>
-`<>` means required, `[]` means optional
+`<>` means an argument is required, `[]` means it's optional
 </Warning>
 
-### Adding a channel
 
+### Adding a channel
 Add a channel to receive welcome messages.
 
 <CodeGroup>
-  ```syntax /welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]````
+```js Syntax
+/welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
+```
 </CodeGroup>
 
-- `channel` (channel) — optional
+- `channel` (channel): optional <br/>
   The channel that will receive welcome messages.
-- `content_name` (text) — optional
+- `content_name` (text): optional <br/>
   The custom content to use for this welcome message.
-- `delay` (time) — optional
+- `delay` (time): optional <br/>
   Delay before sending the welcome message.
-- `delete_after` (time) — optional
+- `delete_after` (time): optional <br/>
   Delete after sending the welcome message.
-- `enable` (bool) — default: `true`
+- `enable` (bool): defaults to **true** <br/>
   Whether the welcomer is enabled for this channel.
-- `webhook_name` (text) — default: `"baobun | welcomer"`
+- `webhook_name` (text): defaults to **baobun** <br/>
   Name of the webhook created for the welcomer.
 
-### Removing a channel
 
+### Removing a channel
 Remove a channel from receiving welcome messages.
 
-<CodeGroup>``` syntax /welcomer remove [channel] ```</CodeGroup>
+<CodeGroup>
+```js Syntax
+welcomer remove [channel]
+```
+</CodeGroup>
 
-- `channel` (channel) — optional
+- `channel` (channel): optional <br/>
   The channel to remove from the welcomer.
 
-### Delaying a channel
 
+### Delaying a channel
 Change the delay for the welcomer.
 
 <Note>Setting a delay of 0s sets no delay for the welcomer message</Note>
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer delay <delay> [channel]
 ```
 </CodeGroup>
 
-- `delay` (time) — required
+- `delay` (time): required <br/>
   The delay duration you want to delay the welcomer messages.
-- `channel` (channel) — optional
+- `channel` (channel): optional <br/>
   The channel to apply the delay to.
 
-### Deleting after a channel
 
+### Deleting after a channel
 Change the delete after for the welcomer.
 
 <Note>Setting delete_after to 0s keeps the welcomer message</Note>
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer delete-after <delete_after> [channel]
 ```
 </CodeGroup>
 
-- `delete_after` (time) — required
+- `delete_after` (time): required <br/>
   The delete after duration after the welcome message is sent.
-- `channel` (channel) — optional
+- `channel` (channel): optional <br/>
   The channel to apply the delay to.
 
-### Enable a channel
 
+### Enable a channel
 Enable or disable the welcomer for a channel.
 
-<CodeGroup>``` syntax /welcomer enable [channel] ```</CodeGroup>
+<CodeGroup>
+```js Syntax
+/welcomer enable [channel]
+```
+</CodeGroup>
 
-- `channel` (channel) — optional
+- `channel` (channel): optional <br/>
   The channel to enable or disable welcomer for.
 
-### Setting content for a channel
 
+### Setting content for a channel
 Set the welcome content for a channel.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /welcomer content <content_name> [channel]
 ```
 </CodeGroup>
 
-- `content_name` (text) — required
+- `content_name` (text): required <br/>
   The name of the content to assign.
-- `channel` (channel) — optional
+- `channel` (channel): optional <br/>
   The channel to apply the content to.
 
-### Test sending
 
+### Test sending
 Run a test welcome message.
 
-<CodeGroup>``` syntax /welcomer test ```</CodeGroup>
-
-_No parameters_
+<CodeGroup>
+```js Syntax
+/welcomer test
+```
+</CodeGroup>

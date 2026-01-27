@@ -5,79 +5,83 @@ description: "Create and manage presets for roles, claim times, and entries."
 ---
 
 <Warning>
-`<>` means required, `[]` means optional
+`<>` means an argument is required, `[]` means it's optional
 </Warning>
+
 
 ### Viewing presets
 View an existing preset.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /preset view <preset_name>
-````
-
+```
 </CodeGroup>
 
-- `preset_name` (text) — required
+- `preset_name` (text): required <br/>
   The name of the preset you want to view.
+
 
 ### Creating a preset
 Create a new preset.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /preset create <preset_name>
 ```
 </CodeGroup>
 
-- `preset_name` (text) — required
+- `preset_name` (text): required <br/>
   The name you want to give the new preset.
+
 
 ### Removing a preset
 Remove an existing preset.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /preset remove <preset_name>
 ```
 </CodeGroup>
 
-- `preset_name` (text) — required
+- `preset_name` (text): required <br/>
   The name of the preset you want to delete.
+
 
 ### Adding a role to a preset
 Add a role configuration to an existing preset.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /preset add-role <preset_name> <role> <claim_time> [entries] [claim_time_stack] [entries_stack]
 ```
 </CodeGroup>
 
-- `preset_name` (text) — required
+- `preset_name` (text): required <br/>
   The name of the preset you want to modify.
-- `role` (role) — required
+- `role` (role): required <br/>
   The role you want to add to the preset.
-- `claim_time` (time) — required
+- `claim_time` (time): required <br/>
   The claim time assigned to this role.
-- `entries` (number) — default: `0`
+- `entries` (number): defaults to **0** <br/>
   The number of extra entries this role grants.
-- `claim_time_stack` (bool) — default: `false`
+- `claim_time_stack` (bool): defaults to **false** <br/>
   Whether claim time stacks with other roles.
-- `entries_stack` (bool) — default: `false`
+- `entries_stack` (bool): defaults to **false** <br/>
   Whether entries stack with other roles.
+
 
 ### Removing a role from a preset
 Remove a role from an existing preset.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /preset remove-role <preset_name> <role>
 ```
 </CodeGroup>
 
-- `preset_name` (text) — required
+- `preset_name` (text): required <br/>
   The name of the preset you want to modify.
-- `role` (role) — required
+- `role` (role): required <br/>
   The role you want to remove from the preset.
 

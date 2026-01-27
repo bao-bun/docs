@@ -1,6 +1,6 @@
 ---
 title: "DM on Join"
-icon: "hashtag"
+icon: "message"
 description: "This guide walks you through setting up **DM on Join** from start to finish. By the end, new members will automatically receive a private message when they join your server."
 ---
 
@@ -9,19 +9,20 @@ DM on Join sends a **direct message** to users when they join your server.
 You can control:
 - Whether DM on Join is enabled
 - What message content is sent
-- Testing messages before going live
+- Test messages before going live
 
 DM on Join does **not** use channels, delays, webhooks, or auto-deletion.  
-Messages are sent directly to the user’s DMs.
+Messages are sent directly to the user's DMs.
+
 
 ## Step 1: Enable DM on Join
 The main setup command is `/dm toggle`.  
 This command enables or disables DM on Join for the server.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /dm enable
-````
+```
 
 </CodeGroup>
 
@@ -29,11 +30,12 @@ This command enables or disables DM on Join for the server.
 - Running it again disables DM on Join
 - The state is saved per server
 
+
 ## Step 2: Assign DM content
 DM on Join uses **custom content** for the message sent to new members.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /dm content <content_name>
 ```
 </CodeGroup>
@@ -42,19 +44,22 @@ DM on Join uses **custom content** for the message sent to new members.
 - The content should be written as a DM-friendly message
 - You can update this at any time without disabling DM on Join
 
-Tip: Use `/content view` to preview the message before assigning it.
+Tip: Use `/content view` to preview the message before assigning it. <br/>
+Learn more about creating custom content in the [Custom Contents Guide](/tutorials/customcontent).
+
 
 ## Step 3: Test your setup
 Before waiting for a real user to join, send a test DM.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /dm test
 ```
 </CodeGroup>
 
 - Sends a test DM to you using the current configuration
 - Confirms that content and permissions are working
+
 
 ## Example setup
 A typical setup might look like this:
@@ -63,23 +68,21 @@ A typical setup might look like this:
 - Content: `welcome-dm`
 
 Commands used:
-
 - `/dm enable`
 - `/dm content welcome-dm`
 - `/dm test`
 
+
 ## Tips and best practices
-- Keep DM messages short and friendly
-- Avoid sending too many links in DMs
-- Use variables like `[user.name]` and `[server.name]`
+- Avoid sending too many links in DMs, users don't like spam
 - Always test before enabling on large servers
+
 
 ## Troubleshooting
 If DM on Join is not sending messages:
-
 - Make sure DM on Join is enabled
 - Verify content exists and is assigned
 - Ensure users have DMs open from server members
 - Run `/dm test` to confirm configuration
 
-
+For further assistance, refer to the [Support Guide](/resources/support).

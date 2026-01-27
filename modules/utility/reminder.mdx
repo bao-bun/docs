@@ -5,44 +5,45 @@ description: "Set, view, and manage personal reminders."
 ---
 
 <Warning>
-`<>` means required, `[]` means optional
+`<>` means an argument is required, `[]` means it's optional
 </Warning>
+
 
 ### Set a reminder
 Create a reminder for yourself that will notify you after a specified duration.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /remind <duration> [message]
-````
+```
 
 </CodeGroup>
 
-- `duration` (time) — required
-  When to remind you (for example: `10m`, `1h`, `1d`, `1w`)
-- `message` (str) — optional
+- `duration` (time): required <br/>
+  When to remind you (for example: **10m**, **1h**, **1d**, **1w**)
+- `message` (str): optional <br/>
   What you want to be reminded about
+
 
 ### View reminders
 View all of your active reminders.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /remind list
 ```
 </CodeGroup>
 
-*No parameters*
 
 ### Delete a reminder
 Delete one of your active reminders.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /remind delete <reminder_id>
 ```
 </CodeGroup>
 
-- `reminder_id` (number) — required
+- `reminder_id` (number): required <br/>
   The ID of the reminder you want to delete
 

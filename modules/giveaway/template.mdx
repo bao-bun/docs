@@ -4,32 +4,31 @@ icon: "map"
 description: "Manage and reuse giveaway templates."
 ---
 
-
 <Warning>
-`<>` means required, `[]` means optional
+`<>` means an argument is required, `[]` means it's optional
 </Warning>
+
 
 ### View templates
 View all created giveaway templates.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /template list
-````
+```
 </CodeGroup>
 
-*No parameters*
 
 ### Create a template
 Create a new giveaway template.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /template create <template_name>
 ```
 </CodeGroup>
 
-- `template_name` (text) — required
+- `template_name` (text): required <br/>
   The name you want to give the template
 
 
@@ -37,22 +36,23 @@ Create a new giveaway template.
 Edit an existing giveaway template.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /template edit <template_name>
 ```
 </CodeGroup>
 
-- `template_name` (text) — required
+- `template_name` (text): required <br/>
   The name of the template you want to edit
+
 
 ### Remove a template
 Remove an existing giveaway template.
 
 <CodeGroup>
-``` syntax
+```js Syntax
 /template remove <template_name>
 ```
 </CodeGroup>
 
-- `template_name` (text) — required
+- `template_name` (text): required <br/>
   The name of the template you want to remove
