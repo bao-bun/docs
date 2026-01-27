@@ -20,7 +20,7 @@ The main setup command is `/welcomer add`.
 This command supports **multiple parameters**, allowing you to configure everything at once.
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
 ````
 
@@ -56,7 +56,7 @@ This command supports **multiple parameters**, allowing you to configure everyth
 If you didn’t assign content during setup, or want to change it later:
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer content <content_name> [channel]
 ```
 </CodeGroup>
@@ -67,7 +67,7 @@ If you didn’t assign content during setup, or want to change it later:
 You can change the delay at any time.
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer delay <delay> [channel]
 ```
 </CodeGroup>
@@ -78,7 +78,7 @@ You can change the delay at any time.
 Change or disable auto-deletion for welcome messages.
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer delete-after <time> [channel]
 ```
 </CodeGroup>
@@ -90,7 +90,7 @@ Change or disable auto-deletion for welcome messages.
 Toggle the welcomer on or off for a channel.
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer enable [channel]
 ```
 </CodeGroup>
@@ -101,7 +101,7 @@ Toggle the welcomer on or off for a channel.
 Always test before going live.
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer test
 ```
 </CodeGroup>
@@ -112,7 +112,7 @@ Always test before going live.
 Here’s an example of configuring everything at once:
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer add #welcome default-welcome 5s 1m true "Welcome Bot"
 ```
 </CodeGroup>

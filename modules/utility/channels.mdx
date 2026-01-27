@@ -13,7 +13,7 @@ description: "Utilities for managing and moderating channels and threads."
 Get the time difference between two messages.
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /timediff [message1_id] [message2_id]
 ````
 
@@ -28,7 +28,7 @@ Get the time difference between two messages.
 
 Delete multiple messages from a channel.
 
-<CodeGroup>```javascript syntax /purge [amount] [before] [after] ```</CodeGroup>
+<CodeGroup>``` syntax /purge [amount] [before] [after] ```</CodeGroup>
 
 - `amount` (number) — optional
   The number of messages to delete (1–2000).
@@ -41,7 +41,7 @@ Delete multiple messages from a channel.
 
 Lock a channel or thread to prevent interaction.
 
-<CodeGroup>```javascript syntax /lock [channel] ```</CodeGroup>
+<CodeGroup>``` syntax /lock [channel] ```</CodeGroup>
 
 - `channel` (channel | thread) — optional
   The channel or thread to lock.
@@ -51,7 +51,7 @@ Lock a channel or thread to prevent interaction.
 
 Hide or archive a channel or thread.
 
-<CodeGroup>```javascript syntax /hide [channel] ```</CodeGroup>
+<CodeGroup>``` syntax /hide [channel] ```</CodeGroup>
 
 - `channel` (channel | thread) — optional
   The channel or thread to hide or archive.
@@ -64,7 +64,7 @@ Rename a channel.
 <Note>This command is rate-limited per channel.</Note>
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /rename [channel] <name>
 ```
 </CodeGroup>
@@ -79,7 +79,7 @@ Rename a channel.
 
 Delete a channel with confirmation.
 
-<CodeGroup>```javascript syntax /delete [channel] ```</CodeGroup>
+<CodeGroup>``` syntax /delete [channel] ```</CodeGroup>
 
 - `channel` (channel) — optional
   The channel you want to delete.
@@ -89,7 +89,7 @@ Delete a channel with confirmation.
 
 Delete and recreate a channel with confirmation.
 
-<CodeGroup>```javascript syntax /nuke [channel] [delete_after] ```</CodeGroup>
+<CodeGroup>``` syntax /nuke [channel] [delete_after] ```</CodeGroup>
 
 - `channel` (channel) — optional
   The channel you want to nuke.
@@ -101,7 +101,7 @@ Delete and recreate a channel with confirmation.
 
 Create a copy of a channel.
 
-<CodeGroup>```javascript syntax /clone [channel] ```</CodeGroup>
+<CodeGroup>``` syntax /clone [channel] ```</CodeGroup>
 
 - `channel` (channel) — optional
   The channel you want to clone.
@@ -111,7 +111,7 @@ Create a copy of a channel.
 
 Move a channel to a different category.
 
-<CodeGroup>```javascript syntax /movech [category] [channel] ```</CodeGroup>
+<CodeGroup>``` syntax /movech [category] [channel] ```</CodeGroup>
 
 - `category` (category) — optional
   The category to move the channel to.

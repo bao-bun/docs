@@ -13,8 +13,7 @@ description: "Welcomer sends messages to channels when a new member joins."
 Add a channel to receive welcome messages.
 
 <CodeGroup>
-  ```javascript syntax /welcomer add [channel] [content_name] [delay]
-  [delete_after] [enable] [webhook_name]````
+  ```syntax /welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]````
 </CodeGroup>
 
 - `channel` (channel) — optional
@@ -34,7 +33,7 @@ Add a channel to receive welcome messages.
 
 Remove a channel from receiving welcome messages.
 
-<CodeGroup>```javascript syntax /welcomer remove [channel] ```</CodeGroup>
+<CodeGroup>``` syntax /welcomer remove [channel] ```</CodeGroup>
 
 - `channel` (channel) — optional
   The channel to remove from the welcomer.
@@ -46,7 +45,7 @@ Change the delay for the welcomer.
 <Note>Setting a delay of 0s sets no delay for the welcomer message</Note>
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer delay <delay> [channel]
 ```
 </CodeGroup>
@@ -63,7 +62,7 @@ Change the delete after for the welcomer.
 <Note>Setting delete_after to 0s keeps the welcomer message</Note>
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer delete-after <delete_after> [channel]
 ```
 </CodeGroup>
@@ -77,7 +76,7 @@ Change the delete after for the welcomer.
 
 Enable or disable the welcomer for a channel.
 
-<CodeGroup>```javascript syntax /welcomer enable [channel] ```</CodeGroup>
+<CodeGroup>``` syntax /welcomer enable [channel] ```</CodeGroup>
 
 - `channel` (channel) — optional
   The channel to enable or disable welcomer for.
@@ -87,7 +86,7 @@ Enable or disable the welcomer for a channel.
 Set the welcome content for a channel.
 
 <CodeGroup>
-```javascript syntax
+``` syntax
 /welcomer content <content_name> [channel]
 ```
 </CodeGroup>
@@ -101,6 +100,6 @@ Set the welcome content for a channel.
 
 Run a test welcome message.
 
-<CodeGroup>```javascript syntax /welcomer test ```</CodeGroup>
+<CodeGroup>``` syntax /welcomer test ```</CodeGroup>
 
 _No parameters_
