@@ -35,7 +35,7 @@
             "icon": "party-horn",
             "pages": [
               "modules/giveaway/quickstart",
-              "modules/giveaway/managment",
+              "modules/giveaway/management",
               "modules/giveaway/configuration",
               "modules/giveaway/preset",
               "modules/giveaway/template"
