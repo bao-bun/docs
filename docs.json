@@ -100,5 +100,8 @@
       "discord": "https://discord.gg/AXRShswtZ4",
       "github": "https://github.com/bao-bun"
     }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
   }
 }
