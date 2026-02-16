@@ -25,21 +25,43 @@ Get the time difference between two messages.
   The ID of the second message.
 
 
-### Purge messages
+### Purge default messages
 Delete multiple messages from a channel.
 
 <CodeGroup>
 ```js Syntax
-/purge [amount] [before] [after]
+/purge [amount]
 ```
 </CodeGroup>
 
 - `amount` (number): optional <br/>
   The number of messages to delete (1-2000).
-- `before` (text): optional <br/>
-  The message ID to purge up to.
+
+
+## Purge after messages
+Delete multiple messages from a channel.
+
+<CodeGroup>
+```js Syntax
+/purge after <message_id> [amount]
+```
+</CodeGroup>
+
 - `after` (text): optional <br/>
   The message ID to purge after.
+  
+
+## Purge before messages
+Delete multiple messages from a channel.
+
+<CodeGroup>
+```js Syntax
+/purge before <message_id> [amount]
+```
+</CodeGroup>
+
+- `before` (text): optional <br/>
+  The message ID to purge up to.
 
 
 ### Lock a channel or thread
