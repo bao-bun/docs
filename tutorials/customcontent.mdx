@@ -49,9 +49,9 @@ After creating the content, define what it should send.
 
 You can include variables such as:
 
-- `[user.mention]`
-- `[user.name]`
-- `[server.name]`
+- `{user.mention}`
+- `{user.name}`
+- `{server.name}`
 
 Learn more about available variables in the [Variables Guide](/resources/variables).
 
@@ -132,7 +132,7 @@ A typical setup might look like this:
 
 Commands used:
 - `/content create welcome-message message`
-- `/content message welcome-message Welcome [user.mention] to **[server.name]**!`
+- `/content message welcome-message Welcome {user.mention} to **{server.name}**!`
 - `/content embed welcome-message`
 - `/welcomer content welcome-message`
 
@@ -150,4 +150,4 @@ If content does not appear correctly:
 - Check variable spelling closely
 - Use `/content view` to preview output
 
-For further assistance, refer to the [Support Guide](/resources/support).
+For further assistance, refer to the [Support Guide](/overview/support).

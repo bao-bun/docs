@@ -62,6 +62,14 @@ description: "All available variables that can be used in custom content."
     | `{channel.category}` | Channel category name |
   </Tab>
 
+  <Tab title="Role">
+    | Variable | Output |
+    |---------|--------|
+    | `{role.id}` | Role ID |
+    | `{role.name}` | Role name |
+    | `{role.mention}` | Role mention |
+  </Tab>
+
   <Tab title="Giveaway">
     | Variable | Output |
     |---------|--------|
@@ -73,5 +81,88 @@ description: "All available variables that can be used in custom content."
     | `{gw.claim_time}` | Winner claim time |
     | `{gw.reaction}` | Giveaway reaction emoji |
     | `{gw.entry_mode}` | Entry method (`click on` / `react with`) |
+    | `{gw.preset}` | All preset role information, used with for loops (see Scripting below) |
   </Tab>
 </Tabs>
+
+---
+
+## Scripting
+
+The scripting system lets you write dynamic content using **loops** and **inline conditions**. This is especially useful in giveaway messages where you want to display extra entries and claim times about a role from a [preset](/modules/giveaway/preset).
+
+<Info>
+  Scripting is currently mainly available in **giveaway** messages. The examples below will only work in giveaway contents.
+</Info>
+
+### Loop over preset roles
+
+Use a `{% for %}` loop to iterate over every role in your giveaway's [preset](/modules/giveaway/preset) and display their entries and claim time.
+
+```
+{% for role in gw.preset %}
+  {role.mention} has **{role.entries}** entries and **{role.claim_time}** claim time
+{% endfor %}
+```
+
+`{% for role in gw.preset %}`: starts the loop; `role` becomes each preset role, one at a time  
+`{role.mention}`: mentions the role  
+`{role.entries}`: the number of extra entries that role has  
+`{role.claim_time}`: the claim time for that role  
+`{% endfor %}`: marks the end of the loop
+
+
+**Example output:**
+> @Active has **1** entries and **10 minutes** claim time  
+> @Boosters has **2** entries and **15 minutes** claim time  
+> @Supporters has **3** entries and **30 minutes** claim time
+
+---
+
+
+### Filter out a specific role
+Use an **inline condition** to skip a role you don't want to display. When the condition matches, `pass` skips all remaining output for that role and moves on to the next role.
+
+```
+{% for role in gw.preset %}
+  {role.id == 1403938022772314155; pass}
+  {role.mention} has **{role.entries}** entries and **{role.claim_time}** claim time
+{% endfor %}
+```
+
+`{role.id == 1403938022772314155; pass}`: <br/>
+If the role ID matches, it will be skipped entirely.
+When the condition **doesn't** match, the line will be fully ignored and the loop will continue.
+
+
+**Example output** (assuming the matched role is @Active):
+> @Boosters has **2** entries and **15 minutes** claim time  
+> @Supporters has **3** entries and **30 minutes** claim time
+
+---
+
+
+### Show a special message for one role
+Use an **inline condition** to display a completely different message for a specific role. When the condition matches, the custom message is shown and the rest of the lines for that role are skipped automatically.
+
+```
+{% for role in gw.preset %}
+  {role.id == 1403938022772314155; "{role.mention} are cool! **{role.entries}** entries"}
+  {role.mention} has **{role.entries}** entries and **{role.claim_time}** claim time
+{% endfor %}
+```
+
+`{role.id == 1403938022772314155; "..."}`:<br/>
+If the role ID matches, it will output the quoted string instead and skip the lines below it for that role.
+For **all other** roles the condition doesn't trigger, so they fall through to the normal line.
+
+
+**Example output** (assuming the matched role is @Supporters):
+> @Active has **1** entries and **10 minutes** claim time  
+> @Boosters has **2** entries and **15 minutes** claim time  
+> @Supporters are cool! **3** entries
+
+
+<Tip>
+  You can use as many inline conditions as you want in the same loop to create complex filtering and output logic. Just remember that once a condition matches, the rest of the lines for that role are skipped, so order your conditions carefully.
+</Tip>
