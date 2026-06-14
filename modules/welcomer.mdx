@@ -14,13 +14,13 @@ Add a channel to receive welcome messages.
 
 <CodeGroup>
 ```js Syntax
-/welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
+/welcomer add [channel] [response_name] [delay] [delete_after] [enable] [webhook_name]
 ```
 </CodeGroup>
 
 - `channel` (channel): optional <br/>
   The channel that will receive welcome messages.
-- `content_name` (text): optional <br/>
+- `response_name` (text): optional <br/>
   The custom content to use for this welcome message.
 - `delay` (time): optional <br/>
   Delay before sending the welcome message.
@@ -97,11 +97,11 @@ Set the welcome content for a channel.
 
 <CodeGroup>
 ```js Syntax
-/welcomer content <content_name> [channel]
+/welcomer content <response_name> [channel]
 ```
 </CodeGroup>
 
-- `content_name` (text): required <br/>
+- `response_name` (text): required <br/>
   The name of the content to assign.
 - `channel` (channel): optional <br/>
   The channel to apply the content to.

@@ -22,7 +22,7 @@ This command supports **multiple parameters**, allowing you to configure everyth
 
 <CodeGroup>
 ```js Syntax
-/welcomer add [channel] [content_name] [delay] [delete_after] [enable] [webhook_name]
+/welcomer add [channel] [response_name] [delay] [delete_after] [enable] [webhook_name]
 ```
 
 </CodeGroup>
@@ -32,7 +32,7 @@ This command supports **multiple parameters**, allowing you to configure everyth
   The channel that will receive welcome messages
   If omitted, the current channel is used
 
-- `content_name` (optional) <br/>
+- `response_name` (optional) <br/>
   The custom content used for the welcome message
   You can change this later using **/welcomer content**
 
@@ -58,7 +58,7 @@ If you didn't assign content during setup, or want to change it later:
 
 <CodeGroup>
 ```js Syntax
-/welcomer content <content_name> [channel]
+/welcomer content <response_name> [channel]
 ```
 </CodeGroup>
 

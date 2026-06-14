@@ -1,6 +1,6 @@
 ---
-title: "Channel Utilities"
-icon: "hashtag"
+title: "Channel"
+icon: "th-list"
 description: "Utilities for managing and moderating channels and threads."
 ---
 
@@ -24,44 +24,6 @@ Get the time difference between two messages.
 - `message2_id` (text): optional <br/>
   The ID of the second message.
 
-
-### Purge default messages
-Delete multiple messages from a channel.
-
-<CodeGroup>
-```js Syntax
-/purge [amount]
-```
-</CodeGroup>
-
-- `amount` (number): optional <br/>
-  The number of messages to delete (1-2000).
-
-
-### Purge after messages
-Delete multiple messages from a channel.
-
-<CodeGroup>
-```js Syntax
-/purge after <message_id> [amount]
-```
-</CodeGroup>
-
-- `after` (text): optional <br/>
-  The message ID to purge after.
-  
-
-### Purge before messages
-Delete multiple messages from a channel.
-
-<CodeGroup>
-```js Syntax
-/purge before <message_id> [amount]
-```
-</CodeGroup>
-
-- `before` (text): optional <br/>
-  The message ID to purge up to.
 
 
 ### Lock a channel or thread

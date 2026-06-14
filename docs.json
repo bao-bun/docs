@@ -25,59 +25,49 @@
     "groups": [
       {
         "group": "Overview",
-        "pages": ["overview/introduction", "overview/support", "overview/links"]
+        "pages": ["overview/introduction"]
       },
       {
         "group": "Modules",
         "pages": [
           {
-            "group": "Giveaways",
+            "group": "Giveaway",
             "icon": "party-horn",
             "pages": [
-              "modules/giveaway/quickstart",
               "modules/giveaway/management",
               "modules/giveaway/configuration",
               "modules/giveaway/preset",
               "modules/giveaway/template"
             ]
           },
-
-          {
-            "group": "Guild",
-            "icon": "house",
-            "pages": [
-              "modules/guild/welcomer",
-              "modules/guild/dmonjoin",
-              "modules/guild/customcontents",
-              "modules/guild/customization"
-            ]
-          },
-          {
-            "group": "Utility",
-            "icon": "sliders",
-            "pages": [
-              "modules/utility/channels",
-              "modules/utility/info",
-              "modules/utility/reminder"
-            ]
-          }
+          "modules/customize",
+          "modules/welcomer",
+          "modules/response",
+          "modules/reminder",
+          "modules/channel",
+          "modules/info",
+          "modules/emoji",
+          "modules/purge"
         ]
       },
       {
         "group": "Tutorials",
         "pages": [
-          "tutorials/customcontent",
-          "tutorials/welcomer",
-          "tutorials/dm"
+          "tutorials/response",
+          "tutorials/welcomer"
         ]
       },
       {
         "group": "Resources",
         "pages": [
-          "resources/message_id",
           "resources/syntax",
-          "resources/variables",
-          "resources/embed_layout"
+          "resources/variables"
+        ]
+      },
+      {
+        "group": "Settings",
+        "pages": [
+          "settings/dev_mode"
         ]
       }
     ]

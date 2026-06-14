@@ -1,6 +1,6 @@
 ---
-title: "Custom Contents"
-icon: "icons"
+title: "Response"
+icon: "comment"
 description: "This guide walks you through creating and managing **Custom Contents**. Custom Contents are used by multiple features such as **Welcomer**, **DM on Join**, and **Giveaways**."
 ---
 
@@ -22,11 +22,11 @@ Start by creating a new piece of custom content.
 
 <CodeGroup>
 ```js Syntax
-/content create <content_name> <content_type>
+/content create <response_name> <content_type>
 ```
 </CodeGroup>
 
-- `content_name` is the name used to reference the content
+- `response_name` is the name used to reference the content
 - `content_type` defines how the content behaves
 
 Examples include `gw` (giveaway), `welc` (welcomer), `doj` (dm on join), and other supported types.
@@ -40,7 +40,7 @@ After creating the content, define what it should send.
 
 <CodeGroup>
 ```js Syntax
-/content message <content_name> [message]
+/content message <response_name> [message]
 ```
 </CodeGroup>
 
@@ -60,7 +60,7 @@ If your content supports embeds, you can fully customize how it looks.
 
 <CodeGroup>
 ```js Syntax
-/content embed <content_name>
+/content embed <response_name>
 ```
 </CodeGroup>
 
@@ -74,7 +74,7 @@ Preview your content before using it in a feature.
 
 <CodeGroup>
 ```js Syntax
-/content view <content_name>
+/content view <response_name>
 ```
 </CodeGroup>
 
@@ -103,7 +103,7 @@ You can change how a content behaves after creation.
 
 <CodeGroup>
 ```js Syntax
-/content type <content_name> <content_type>
+/content type <response_name> <content_type>
 ```
 </CodeGroup>
 
@@ -115,7 +115,7 @@ If a piece of content is no longer needed, you can delete it.
 
 <CodeGroup>
 ```js Syntax
-/content remove <content_name>
+/content remove <response_name>
 ```
 </CodeGroup>
 
